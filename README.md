@@ -1,6 +1,6 @@
-# TechFit: Resume-to-Career Matcher
+# Techfit: Resume-to-Career Matcher
 
-TechFit is a personal project built to help people see where their skills fit in the tech industry. It takes a resume file, analyzes the text, and suggests the top three job roles that match the user's experience.
+Techfit is a personal project built to help people see where their skills fit in the tech industry. It takes a resume file, analyzes the text, and suggests the top three job roles that match the user's experience.
 
 
 <img src="frontend/images/techfit-preview.png" width="1100">

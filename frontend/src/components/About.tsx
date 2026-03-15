@@ -9,10 +9,10 @@ const About = () => {
         
         <div className="about-header">
           <span className="about-pre-title">Under the hood</span>
-          <h2 className="about-title">What is TechFit?</h2>
+          <h2 className="about-title">What is Techfit?</h2>
           <p className="about-subtitle">
             The tech industry is vast, and finding exactly where a specific set of skills fits can feel overwhelming. 
-            TechFit was engineered to remove the guesswork and bridge the gap between raw experience and the ideal career path.
+            Techfit was engineered to remove the guesswork and bridge the gap between raw experience and the ideal career path.
           </p>
         </div>
 

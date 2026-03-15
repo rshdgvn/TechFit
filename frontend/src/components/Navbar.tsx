@@ -14,10 +14,10 @@ export default function Navbar({ theme, setTheme }: NavbarProps) {
         <a href="#" className="logo-link">
           <img
             src="/icon.svg"
-            alt="TechFit Logo"
+            alt="Techfit Logo"
             className="logo-img"
           />
-          <span className="logo-text">TechFit</span>
+          <span className="logo-text">Techfit</span>
         </a>
 
         <div className="navbar-right">

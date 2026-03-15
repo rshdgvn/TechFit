@@ -7,7 +7,7 @@ const ComingSoon = () => {
         <div className="cs-header">
           <h2 className="cs-title">Coming Soon</h2>
           <p className="cs-subtitle">
-            Here’s what TechFit is building next to help you navigate your tech career.
+            Here’s what Techfit is building next to help you navigate your tech career.
           </p>
         </div>
 

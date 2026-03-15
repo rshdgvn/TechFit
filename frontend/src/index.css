@@ -576,7 +576,7 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; transition: background 0.3s
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: #2563eb; /* TechFit Blue */
+  background: #2563eb; 
   box-shadow: 0 0 12px rgba(37, 99, 235, 0.6);
   z-index: 2;
   flex-shrink: 0;

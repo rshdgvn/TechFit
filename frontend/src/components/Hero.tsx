@@ -19,7 +19,7 @@ export default function Hero() {
       
       <p className="hero-p">
         Not sure which tech career suits you? Upload your resume and
-        TechFit's will analyze your skills and experience — then match
+        Techfit's will analyze your skills and experience — then match
         you to the roles where you'll thrive most.
       </p>
 

@@ -16,7 +16,7 @@ export default function Results({ suggestions, onReset }: ResultsProps) {
         <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "var(--success-light)", border: "1px solid rgba(22,163,74,0.18)", color: "var(--success)", padding: "5px 14px", borderRadius: 99, fontSize: "0.75rem", fontWeight: 600, marginBottom: 14 }}>
           <IcoCheck /> Analysis complete
         </div>
-        <h2 className="results-title">Your TechFit matches</h2>
+        <h2 className="results-title">Your Techfit matches</h2>
         <p className="results-sub">
           Based on your resume, here are the tech roles that best align with your skills and experience.
         </p>
@@ -65,7 +65,7 @@ export default function Results({ suggestions, onReset }: ResultsProps) {
 
       <div style={{ display: "flex", alignItems: "center", gap: 8, padding: "11px 14px", background: "var(--success-light)", border: "1px solid rgba(22,163,74,0.18)", borderRadius: "var(--r-md)", marginBottom: 24, fontSize: "0.79rem", color: "var(--success)" }}>
         <IcoShield />
-        Your resume was not saved. All data was discarded by TechFit after this real-time analysis.
+        Your resume was not saved. All data was discarded by Techfit after this real-time analysis.
       </div>
 
       <div style={{ display: "flex", justifyContent: "center" }}>
