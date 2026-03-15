@@ -2,6 +2,10 @@
 
 TechFit is a personal project built to help people see where their skills fit in the tech industry. It takes a resume file, analyzes the text, and suggests the top three job roles that match the user's experience.
 
+
+<img src="frontend/images/techfit-preview.png" width="1100">
+
+
 ## Project Description
 
 I built this app to solve a simple problem: figuring out which tech career path to take based on your current resume. The app is a full-stack project consisting of a React frontend and a FastAPI backend. It uses a machine learning model to categorize resumes into different tech roles.
