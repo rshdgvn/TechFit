@@ -1,0 +1,5 @@
+# Allow all search engines to crawl the whole site
+User-agent: *
+Allow: /
+
+Sitemap: https://techfit-rshdgvn.vercel.app/sitemap.xml
