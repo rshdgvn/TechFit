@@ -8,9 +8,10 @@ import UploadCard from "./components/UploadCard";
 import HowItWorks from "./components/HowItWorks";
 import Results from "./components/Results";
 import Footer from "./components/Footer";
+import ComingSoon from "./components/ComingSoon";
 
 export default function App() {
-  const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [theme, setTheme] = useState<"light" | "dark">("dark");
   const [file, setFile] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
   const [results, setResults] = useState<PredictionResponse | null>(null);
@@ -63,6 +64,7 @@ export default function App() {
             />
           </section>
           <HowItWorks />
+          <ComingSoon />
         </>
       ) : (
         <Results suggestions={results.suggestions} onReset={handleReset} />

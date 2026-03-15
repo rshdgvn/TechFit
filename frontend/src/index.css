@@ -88,6 +88,51 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; transition: background 0.3s
 @media (max-width: 780px) {
   .hero { grid-template-columns: 1fr; gap: 40px; padding: 48px 20px 40px; }
 }
+
+.hero-container {
+  position: relative;
+  z-index: 1; /* Ensures text stays on top */
+}
+
+/* 1. Ambient Background Glow */
+.hero-glow-blob {
+  position: absolute;
+  top: -10%; /* Adjust position as needed */
+  left: -10%; /* Adjust position as needed */
+  width: 300px;
+  height: 300px;
+  background: var(--accent, #2563eb); /* Your brand color */
+  filter: blur(150px); /* The secret to the glow */
+  opacity: 0.15; /* Keeps it very subtle */
+  z-index: -1; /* Places it behind all content */
+  border-radius: 50%;
+  pointer-events: none; /* Prevents it from blocking clicks */
+}
+
+/* 2. Gradient Text for "tech." */
+.hero-highlight {
+  font-style: normal; /* Removes the slant for a cleaner look */
+  background: linear-gradient(135deg, #2563eb 0%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  position: relative;
+}
+
+/* Optional: Add a subtle glow-like underline */
+.hero-highlight::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(37, 99, 235, 0.3); /* Semi-transparent blue */
+  border-radius: 2px;
+  filter: blur(1px); /* Softens the underline */
+}
+
+
 .hero-eyebrow {
   display: inline-flex; align-items: center; gap: 6px;
   background: var(--accent-light); color: var(--accent);
@@ -106,15 +151,39 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; transition: background 0.3s
   font-size: 1.05rem; font-weight: 400; color: var(--text-secondary);
   line-height: 1.75; margin-bottom: 28px; max-width: 420px;
 }
-.trust-list { display: flex; flex-direction: column; gap: 8px; }
+.trust-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
 .trust-item {
-  display: flex; align-items: center; gap: 8px;
-  font-size: 0.82rem; font-weight: 500; color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.trust-item:hover {
+  opacity: 1;
+  transform: translateX(4px); /* Slight nudge right on hover */
 }
 .trust-icon-wrap {
-  width: 20px; height: 20px; border-radius: 50%;
-  background: var(--success-light); display: flex; align-items: center; justify-content: center;
-  color: var(--success); flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(34, 197, 94, 0.1); /* Soft green background */
+  color: #22c55e; /* Bright green check */
+  flex-shrink: 0;
+}
+
+.trust-text {
+  font-weight: 500;
 }
 
 /* Upload card */
@@ -291,3 +360,124 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; transition: background 0.3s
 .spin { animation: spin 0.9s linear infinite; }
 .du1 { animation-delay: 0.06s; } .du2 { animation-delay: 0.14s; } .du3 { animation-delay: 0.22s; }
 
+/* --- Coming Soon Section --- */
+.coming-soon-section {
+  padding: 80px 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.cs-inner {
+  max-width: 700px;
+  width: 100%;
+}
+
+.cs-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.cs-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.cs-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.7;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Timeline Layout */
+.cs-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cs-timeline-item {
+  display: flex;
+  gap: 24px;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+}
+
+.cs-timeline-item:hover {
+  opacity: 1;
+}
+
+/* The Glowing Dot and Connecting Line */
+.cs-timeline-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.cs-marker-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #2563eb; /* TechFit Blue */
+  box-shadow: 0 0 12px rgba(37, 99, 235, 0.6);
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.cs-marker-line {
+  width: 2px;
+  height: 100%;
+  min-height: 60px;
+  background: rgba(37, 99, 235, 0.2);
+  margin-top: 8px;
+}
+
+/* Hides the line on the very last item */
+.cs-timeline-item:last-child .cs-marker-line {
+  display: none;
+}
+
+/* The Glassmorphism Cards */
+.cs-timeline-content {
+  background: rgba(128, 128, 128, 0.05);
+  border: 1px solid rgba(128, 128, 128, 0.1);
+  border-radius: 16px;
+  padding: 24px;
+  flex: 1;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.cs-timeline-item:hover .cs-timeline-content {
+  transform: translateX(8px);
+  border-color: rgba(37, 99, 235, 0.3);
+}
+
+.cs-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 12px;
+  border-radius: 99px;
+  background: rgba(37, 99, 235, 0.1);
+  color: #2563eb;
+  margin-bottom: 12px;
+}
+
+.cs-item-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.cs-item-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.8;
+  margin: 0;
+}
