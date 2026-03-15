@@ -2,8 +2,8 @@ from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 import joblib
 import pandas as pd
-import ast
 import os
+import re
 
 from utils.parser import extract_text_from_file
 from utils.processor import clean_resume_text, extract_skills
@@ -34,13 +34,10 @@ known_skills = set()
 df = pd.read_csv(DATA_PATH)
 df.columns = [col.strip().replace('\ufeff', '') for col in df.columns]
 
-import re
-
 for skill_str in df['skills'].dropna():
     skill_str = str(skill_str)
     
     clean_str = skill_str.replace('[', '').replace(']', '').replace("'", "").replace('"', "")
-    
     skills_list = re.split(r'[,\n]', clean_str)
     
     for skill in skills_list:
@@ -49,28 +46,14 @@ for skill_str in df['skills'].dropna():
             known_skills.add(clean_skill)
             
 known_skills = list(known_skills)
-print(f"SUCCESS: Loaded {len(known_skills)} unique skills from your CSV dataset.")
     
-@app.post("/extract-skills")
-async def get_skills(file: UploadFile = File(...)):
-    contents = await file.read()
-    
-    raw_text = extract_text_from_file(contents, file.filename)
-    
-    detected_skills = extract_skills(raw_text, known_skills)
-    
-    return {
-        "filename": file.filename,
-        "total_skills_found": len(detected_skills),
-        "skills": detected_skills
-    }
-
 @app.post("/predict")
 async def predict_job(file: UploadFile = File(...)):
     contents = await file.read()
     
     raw_text = extract_text_from_file(contents, file.filename)        
     detected_skills = extract_skills(raw_text, known_skills)    
+    
     skills_only_text = " ".join(detected_skills)
     
     if not skills_only_text:
@@ -87,7 +70,11 @@ async def predict_job(file: UploadFile = File(...)):
             "confidence": round(float(probabilities[i]) * 100, 2)
         })
         
-    return {"suggestions": suggestions}
+    return {
+        "filename": file.filename,
+        "extracted_skills": detected_skills,
+        "suggestions": suggestions
+    }
 
 if __name__ == "__main__":
     import uvicorn
