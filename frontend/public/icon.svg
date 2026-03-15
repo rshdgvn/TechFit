@@ -1,14 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
-  <rect width="100" height="100" rx="20" fill="#0f172a" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 350" width="100%" height="100%">
   
-  <circle cx="50" cy="62" r="20" fill="#3b82f6" />
+  <circle cx="160" cy="260" r="30" fill="#3B82F6" />
+
+  <path d="
+    M 160 10
+    L 10 160
+    L 80 160
+    L 80 260
+    A 80 80 0 0 0 240 260
+    L 240 160
+    L 310 160
+    Z
+    M 160 215
+    A 45 45 0 1 0 160 305
+    A 45 45 0 1 0 160 215
+  " fill="#1E40AF" fill-rule="evenodd" />
   
-  <path 
-    d="M 25 42 L 50 17 L 75 42 M 50 17 L 50 48" 
-    fill="none" 
-    stroke="#ffffff" 
-    stroke-width="8" 
-    stroke-linecap="round" 
-    stroke-linejoin="round" 
-  />
 </svg>
