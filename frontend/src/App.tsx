@@ -12,7 +12,7 @@ import ComingSoon from "./components/ComingSoon";
 import About from "./components/About";
 
 export default function App() {
-  const [theme, setTheme] = useState<"light" | "dark">("dark");
+  const [theme, setTheme] = useState<"light" | "dark">("light");
   const [file, setFile] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
   const [results, setResults] = useState<PredictionResponse | null>(null);
