@@ -290,3 +290,4 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; transition: background 0.3s
 @keyframes spin { to { transform: rotate(360deg); } }
 .spin { animation: spin 0.9s linear infinite; }
 .du1 { animation-delay: 0.06s; } .du2 { animation-delay: 0.14s; } .du3 { animation-delay: 0.22s; }
+

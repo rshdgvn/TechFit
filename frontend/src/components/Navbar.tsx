@@ -10,11 +10,21 @@ export default function Navbar({ theme, setTheme }: NavbarProps) {
     <nav className="navbar">
       <div className="navbar-inner">
         <div className="logo">
-          <div className="logo-dot" />
+          <img
+            src="/icon.svg"
+            alt="TechFit Logo"
+            className="h-10 w-10"
+          />
           <span>TechFit</span>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-          <span style={{ fontSize: "0.78rem", color: "var(--text-muted)", fontWeight: 500 }}>
+          <span
+            style={{
+              fontSize: "0.78rem",
+              color: "var(--text-muted)",
+              fontWeight: 500,
+            }}
+          >
             Tech Career Matching
           </span>
           <button
