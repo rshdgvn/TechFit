@@ -2,7 +2,7 @@ import { goals } from "../constants/goals";
 
 const ComingSoon = () => {
   return (
-    <section className="coming-soon-section">
+    <section className="coming-soon-section" id="coming-soon">
       <div className="cs-inner">
         <div className="cs-header">
           <h2 className="cs-title">Coming Soon</h2>

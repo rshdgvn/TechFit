@@ -1,3 +1,4 @@
+import React from "react";
 import { IcoMoon, IcoSun } from "./Icons";
 
 interface NavbarProps {
@@ -9,24 +10,23 @@ export default function Navbar({ theme, setTheme }: NavbarProps) {
   return (
     <nav className="navbar">
       <div className="navbar-inner">
-        <div className="logo">
+        
+        <a href="#" className="logo-link">
           <img
             src="/icon.svg"
             alt="TechFit Logo"
-            className="h-10 w-10"
+            className="logo-img"
           />
-          <span>TechFit</span>
-        </div>
-        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-          <span
-            style={{
-              fontSize: "0.78rem",
-              color: "var(--text-muted)",
-              fontWeight: 500,
-            }}
-          >
-            Tech Career Matching
-          </span>
+          <span className="logo-text">TechFit</span>
+        </a>
+
+        <div className="navbar-right">
+          <div className="nav-links">
+            <a href="#about" className="nav-item">About</a>
+            <a href="#how-it-works" className="nav-item">Pipeline</a>
+            <a href="#coming-soon" className="nav-item">Coming Soon</a>
+          </div>
+          
           <button
             className="theme-btn"
             onClick={() => setTheme((t) => (t === "light" ? "dark" : "light"))}
@@ -35,6 +35,7 @@ export default function Navbar({ theme, setTheme }: NavbarProps) {
             {theme === "light" ? <IcoMoon /> : <IcoSun />}
           </button>
         </div>
+
       </div>
     </nav>
   );

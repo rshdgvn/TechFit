@@ -55,16 +55,91 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; transition: background 0.3s
   min-height: 100vh; transition: background 0.3s, color 0.3s;
 }
 
-/* Navbar */
 .navbar {
-  position: sticky; top: 0; z-index: 100;
-  background: var(--bg); border-bottom: 1px solid var(--border);
-  transition: background 0.3s, border-color 0.3s;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--nav-bg) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-primary);
 }
+
 .navbar-inner {
-  max-width: 1100px; margin: 0 auto; padding: 0 24px;
-  height: 64px; display: flex; align-items: center; justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-item {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+
+.nav-item:hover {
+  color: var(--accent-blue);
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-img {
+  height: 28px;
+  width: 28px;
+}
+
+.logo-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.theme-btn {
+  background: transparent !important;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  color: var(--text-primary);
+  display: flex;
+  transition: all 0.2s ease;
+}
+
+.theme-btn:hover {
+  background: rgba(128, 128, 128, 0.1) !important;
+  transform: scale(1.05);
+}
+
+@media (max-width: 650px) {
+  .nav-links {
+    display: none;
+  }
+}
+
 .logo {
   font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 1.25rem;
   color: var(--text-primary); letter-spacing: -0.02em;
@@ -72,15 +147,7 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; transition: background 0.3s
 }
 .logo-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
 .logo span { color: var(--accent); }
-.theme-btn {
-  width: 38px; height: 38px; border-radius: var(--r-sm);
-  background: var(--bg-alt); border: 1px solid var(--border);
-  cursor: pointer; display: flex; align-items: center; justify-content: center;
-  color: var(--text-secondary); transition: all 0.2s;
-}
-.theme-btn:hover { border-color: var(--border-hover); color: var(--text-primary); }
 
-/* Hero */
 .hero {
   max-width: 1100px; margin: 0 auto; padding: 120px 10px 180px;
   display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center;
@@ -91,27 +158,24 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; transition: background 0.3s
 
 .hero-container {
   position: relative;
-  z-index: 1; /* Ensures text stays on top */
+  z-index: 1; 
 }
-
-/* 1. Ambient Background Glow */
 .hero-glow-blob {
   position: absolute;
-  top: -10%; /* Adjust position as needed */
-  left: -10%; /* Adjust position as needed */
+  top: -10%; 
+  left: -10%; 
   width: 300px;
   height: 300px;
-  background: var(--accent, #2563eb); /* Your brand color */
-  filter: blur(150px); /* The secret to the glow */
-  opacity: 0.15; /* Keeps it very subtle */
-  z-index: -1; /* Places it behind all content */
+  background: var(--accent, #2563eb); 
+  filter: blur(150px); 
+  opacity: 0.15; 
+  z-index: -1; 
   border-radius: 50%;
-  pointer-events: none; /* Prevents it from blocking clicks */
+  pointer-events: none; 
 }
 
-/* 2. Gradient Text for "tech." */
 .hero-highlight {
-  font-style: normal; /* Removes the slant for a cleaner look */
+  font-style: normal; 
   background: linear-gradient(135deg, #2563eb 0%, #60a5fa 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -119,7 +183,6 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; transition: background 0.3s
   position: relative;
 }
 
-/* Optional: Add a subtle glow-like underline */
 .hero-highlight::after {
   content: "";
   position: absolute;
@@ -127,11 +190,10 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; transition: background 0.3s
   left: 0;
   width: 100%;
   height: 3px;
-  background: rgba(37, 99, 235, 0.3); /* Semi-transparent blue */
+  background: rgba(37, 99, 235, 0.3); 
   border-radius: 2px;
-  filter: blur(1px); /* Softens the underline */
+  filter: blur(1px); 
 }
-
 
 .hero-eyebrow {
   display: inline-flex; align-items: center; gap: 6px;
@@ -168,7 +230,7 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; transition: background 0.3s
 
 .trust-item:hover {
   opacity: 1;
-  transform: translateX(4px); /* Slight nudge right on hover */
+  transform: translateX(4px); 
 }
 .trust-icon-wrap {
   display: flex;
@@ -177,8 +239,8 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; transition: background 0.3s
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: rgba(34, 197, 94, 0.1); /* Soft green background */
-  color: #22c55e; /* Bright green check */
+  background: rgba(34, 197, 94, 0.1);
+  color: #22c55e; 
   flex-shrink: 0;
 }
 
@@ -186,7 +248,6 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; transition: background 0.3s
   font-weight: 500;
 }
 
-/* Upload card */
 .upload-card {
   background: var(--bg-card); border: 1px solid var(--border);
   border-radius: var(--r-xl); box-shadow: var(--shadow-lg); padding: 28px;
@@ -197,7 +258,6 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; transition: background 0.3s
   letter-spacing: 0.09em; color: var(--text-muted); margin-bottom: 14px;
 }
 
-/* Dropzone */
 .dz {
   border: 2px dashed var(--border); border-radius: var(--r-lg);
   padding: 36px 20px; text-align: center; cursor: pointer;
@@ -216,7 +276,6 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; transition: background 0.3s
   border-color: var(--accent); box-shadow: 0 0 0 4px rgba(37,99,235,0.1);
 }
 
-/* File pill */
 .file-pill {
   display: flex; align-items: center; gap: 10px;
   padding: 10px 12px; background: var(--bg-alt);
@@ -230,7 +289,6 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; transition: background 0.3s
   color: var(--accent); flex-shrink: 0;
 }
 
-/* Buttons */
 .btn-primary {
   background: var(--accent); color: #fff; border: none; cursor: pointer;
   padding: 10px 20px; border-radius: var(--r-sm);
@@ -255,7 +313,6 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; transition: background 0.3s
 }
 .btn-ghost:hover { border-color: var(--border-hover); color: var(--text-primary); background: var(--bg-alt); }
 
-/* Feedback boxes */
 .privacy-box {
   display: flex; align-items: flex-start; gap: 10px;
   background: var(--success-light); border: 1px solid rgba(22,163,74,0.18);
@@ -270,28 +327,126 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; transition: background 0.3s
   font-size: 0.82rem; color: var(--error); line-height: 1.55;
 }
 
-/* How it works */
-.how { background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 60px 24px; transition: background 0.3s; }
-.how-inner { max-width: 940px; margin: 0 auto; }
 .section-title {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 700; font-size: 1.7rem;
   letter-spacing: -0.025em; color: var(--text-primary); margin-bottom: 36px; text-align: center;
 }
-.how-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; }
-@media (max-width: 640px) { .how-grid { grid-template-columns: 1fr; } }
-.how-card {
-  background: var(--bg-card); border: 1px solid var(--border);
-  border-radius: var(--r-lg); padding: 24px;
+
+.how-section {
+  padding: 100px 24px;
+  display: flex;
+  justify-content: center;
+  background: rgba(128, 128, 128, 0.01);
 }
+
+.how-container {
+  max-width: 800px; /* Kept narrow for better reading flow */
+  width: 100%;
+}
+
+.how-header {
+  margin-bottom: 60px;
+}
+
+.how-pre-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #2563eb;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.how-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.how-pipeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.how-step {
+  display: flex;
+  gap: 32px;
+  position: relative;
+}
+
+.how-node-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50px;
+  flex-shrink: 0;
+}
+
+.how-node {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--card-bg) !important; 
+  border: 2px solid var(--accent-blue);
+  color: var(--accent) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.1);
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.how-line {
+  width: 2px;
+  flex-grow: 1; 
+  background: linear-gradient(to bottom, rgba(37, 99, 235, 0.5), rgba(37, 99, 235, 0.1));
+  margin: 12px 0;
+}
+
+.how-content {
+  padding-bottom: 60px; 
+  position: relative;
+  top: -4px;
+}
+
 .how-num {
-  width: 34px; height: 34px; border-radius: 10px;
-  background: var(--accent-light); border: 1px solid rgba(37,99,235,0.15);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 0.78rem; font-weight: 700; color: var(--accent); margin-bottom: 14px;
+  font-family: monospace; 
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: rgba(128, 128, 128, 0.4);
+  margin-bottom: 8px;
 }
-.how-card-title { font-weight: 700; font-size: 0.95rem; color: var(--text-primary); margin-bottom: 6px; }
-.how-card-body  { font-size: 0.84rem; color: var(--text-secondary); line-height: 1.65; }
+
+.how-step-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.how-step-body {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  opacity: 0.75;
+  margin: 0;
+  max-width: 500px;
+}
+
+@media (max-width: 600px) {
+  .how-step {
+    gap: 20px;
+  }
+  .how-node {
+    width: 40px;
+    height: 40px;
+  }
+  .how-node svg {
+    width: 20px;
+    height: 20px;
+  }
+}
 
 .results { max-width: 860px; margin: 0 auto; padding: 64px 24px; }
 .results-head { text-align: center; margin-bottom: 44px; animation: fadeUp 0.5s both; }
@@ -480,4 +635,155 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; transition: background 0.3s
   line-height: 1.6;
   opacity: 0.8;
   margin: 0;
+}
+/* --- Unique About Section --- */
+.about-section {
+  position: relative;
+  padding: 0 24px 100px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 1. Glowing Line Separator */
+.tech-separator {
+  width: 100%;
+  max-width: 1000px;
+  height: 1px;
+  /* Fades out at the edges, bright blue in the middle */
+  background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.6), transparent);
+  margin-bottom: 80px;
+  position: relative;
+}
+
+/* Adds a tiny glowing dot to the center of the line for a cool tech detail */
+.tech-separator::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 7px;
+  background: #2563eb;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #2563eb;
+}
+
+.about-container {
+  max-width: 1100px;
+  width: 100%;
+}
+
+/* 2. Header Layout */
+.about-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px auto;
+}
+
+.about-pre-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #2563eb;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.about-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  letter-spacing: -0.03em;
+}
+
+.about-subtitle {
+  font-size: 1.15rem;
+  opacity: 0.7;
+  line-height: 1.6;
+}
+
+/* 3. Strict 3-Column Uniform Grid */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Forces exactly 3 equal columns */
+  gap: 24px;
+  align-items: stretch; /* Forces all cards to stretch to the height of the tallest one */
+}
+
+/* The Cards */
+.about-card {
+  display: flex;
+  flex-direction: column; /* Pushes content down neatly */
+  height: 100%; /* Guarantees they fill the grid space equally */
+  background: rgba(128, 128, 128, 0.03);
+  border: 1px solid rgba(128, 128, 128, 0.1);
+  border-radius: 16px;
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Premium Tech Hover Effect: Adds a glowing top border */
+.about-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: transparent;
+  transition: background 0.3s ease;
+}
+
+.about-card:hover {
+  background: rgba(128, 128, 128, 0.06);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+}
+
+.about-card:hover::before {
+  background: linear-gradient(90deg, transparent, #2563eb, transparent);
+}
+
+.about-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(37, 99, 235, 0.08);
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.about-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.about-card-body {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.75;
+  margin: 0;
+  flex-grow: 1; /* Ensures text flows naturally but cards stay equal height */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: repeat(2, 1fr); /* Drops to 2 columns on tablets */
+  }
+}
+
+@media (max-width: 650px) {
+  .about-grid {
+    grid-template-columns: 1fr; /* Drops to 1 column on phones */
+  }
 }

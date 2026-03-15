@@ -9,6 +9,7 @@ import HowItWorks from "./components/HowItWorks";
 import Results from "./components/Results";
 import Footer from "./components/Footer";
 import ComingSoon from "./components/ComingSoon";
+import About from "./components/About";
 
 export default function App() {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
@@ -63,6 +64,7 @@ export default function App() {
               error={error} 
             />
           </section>
+          <About />
           <HowItWorks />
           <ComingSoon />
         </>
