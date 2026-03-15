@@ -1,4 +1,4 @@
-import { IcoCheck, IcoRefresh, IcoShield } from "./Icons";
+import { IcoRefresh, } from "./Icons";
 import { RANKS } from "../constants/ranks";
 import type { JobSuggestion } from "../types/jobSuggestion";
 
