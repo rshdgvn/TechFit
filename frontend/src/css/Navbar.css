@@ -34,3 +34,78 @@
 @media (max-width: 650px) {
   .nav-links { display: none; }
 }
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mobile-menu-btn {
+  display: none; 
+}
+
+.mobile-dropdown {
+  position: absolute;
+  top: 64px; 
+  left: 0;
+  width: 100%;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  box-shadow: var(--shadow-md);
+}
+
+.mobile-dropdown.open {
+  max-height: 250px;
+  padding: 12px 24px 24px 24px;
+}
+
+.mobile-nav-item {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+  transition: color 0.2s ease;
+}
+
+.mobile-nav-item:last-child {
+  border-bottom: none;
+}
+
+.mobile-nav-item:hover {
+  color: var(--accent);
+}
+
+.mobile-theme-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+}
+.mobile-theme-toggle svg {
+  color: var(--text-muted);
+}
+
+@media (max-width: 650px) {
+  .nav-links,
+  .desktop-theme-btn {
+    display: none; 
+  }
+  
+  .mobile-menu-btn {
+    display: flex; 
+  }
+}
