@@ -1,0 +1,37 @@
+.how-section {
+  padding: 100px 24px; display: flex; justify-content: center;
+  background: rgba(128, 128, 128, 0.01);
+}
+.how-container { max-width: 800px; width: 100%; }
+.how-header { margin-bottom: 60px; }
+.how-pre-title {
+  font-size: 0.85rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.1em; color: #2563eb; margin-bottom: 12px; display: block;
+}
+.how-title { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.02em; }
+.how-pipeline { display: flex; flex-direction: column; }
+.how-step { display: flex; gap: 32px; position: relative; }
+.how-node-container { display: flex; flex-direction: column; align-items: center; width: 50px; flex-shrink: 0; }
+.how-node {
+  width: 50px; height: 50px; border-radius: 50%;
+  background: var(--bg-card) !important; border: 2px solid var(--accent);
+  color: var(--accent) !important; display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.1); z-index: 2; transition: all 0.3s ease;
+}
+.how-line {
+  width: 2px; flex-grow: 1; margin: 12px 0;
+  background: linear-gradient(to bottom, rgba(37, 99, 235, 0.5), rgba(37, 99, 235, 0.1));
+}
+.how-content { padding-bottom: 60px; position: relative; top: -4px; }
+.how-num {
+  font-family: monospace; font-size: 1.1rem; font-weight: 700;
+  color: rgba(128, 128, 128, 0.4); margin-bottom: 8px;
+}
+.how-step-title { font-size: 1.5rem; font-weight: 600; margin-bottom: 12px; }
+.how-step-body { font-size: 1.05rem; line-height: 1.6; opacity: 0.75; margin: 0; max-width: 500px; }
+
+@media (max-width: 600px) {
+  .how-step { gap: 20px; }
+  .how-node { width: 40px; height: 40px; }
+  .how-node svg { width: 20px; height: 20px; }
+}

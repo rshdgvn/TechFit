@@ -1,0 +1,53 @@
+.hero {
+  max-width: 1100px; margin: 0 auto; padding: 120px 10px 180px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center;
+}
+@media (max-width: 780px) {
+  .hero { grid-template-columns: 1fr; gap: 40px; padding: 48px 20px 40px; }
+}
+.hero-container { position: relative; z-index: 1; }
+.hero-glow-blob {
+  position: absolute; top: -10%; left: -10%; 
+  width: 300px; height: 300px; background: var(--accent, #2563eb); 
+  filter: blur(150px); opacity: 0.15; z-index: -1; 
+  border-radius: 50%; pointer-events: none; 
+}
+.hero-highlight {
+  font-style: normal; background: linear-gradient(135deg, #2563eb 0%, #60a5fa 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  display: inline-block; position: relative;
+}
+.hero-highlight::after {
+  content: ""; position: absolute; bottom: -2px; left: 0;
+  width: 100%; height: 3px; background: rgba(37, 99, 235, 0.3); 
+  border-radius: 2px; filter: blur(1px); 
+}
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--accent-light); color: var(--accent);
+  border: 1px solid rgba(37,99,235,0.18);
+  padding: 5px 12px; border-radius: 99px;
+  font-size: 0.75rem; font-weight: 600; margin-bottom: 20px;
+}
+.hero-h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700;
+  font-size: clamp(2.4rem, 5vw, 3.6rem); line-height: 1.08;
+  letter-spacing: -0.03em; color: var(--text-primary); margin-bottom: 16px;
+}
+.hero-h1 em { font-style: italic; color: var(--accent); }
+.hero-p {
+  font-size: 1.05rem; font-weight: 400; color: var(--text-secondary);
+  line-height: 1.75; margin-bottom: 28px; max-width: 420px;
+}
+.trust-list { display: flex; flex-direction: column; gap: 12px; margin-top: 24px; }
+.trust-item {
+  display: flex; align-items: center; gap: 12px; font-size: 0.95rem;
+  opacity: 0.9; transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.trust-item:hover { opacity: 1; transform: translateX(4px); }
+.trust-icon-wrap {
+  display: flex; align-items: center; justify-content: center;
+  width: 24px; height: 24px; border-radius: 50%;
+  background: rgba(34, 197, 94, 0.1); color: #22c55e; flex-shrink: 0;
+}
+.trust-text { font-weight: 500; }

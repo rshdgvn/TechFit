@@ -1,5 +1,6 @@
 import React from "react";
 import { IcoMoon, IcoSun } from "./Icons";
+import "../css/Navbar.css";
 
 interface NavbarProps {
   theme: "light" | "dark";

@@ -1,4 +1,5 @@
 import { IcoCheck } from "./Icons";
+import "../css/Hero.css";
 
 export default function Hero() {
   const trustItems = [

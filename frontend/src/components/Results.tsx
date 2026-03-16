@@ -1,6 +1,7 @@
 import { IcoRefresh, } from "./Icons";
 import { RANKS } from "../constants/ranks";
 import type { JobSuggestion } from "../types/jobSuggestion";
+import "../css/Results.css";
 
 interface ResultsProps {
   suggestions: JobSuggestion[];

@@ -1,4 +1,6 @@
 import { GoalIcon, CpuIcon, ShieldIcon } from "./Icons";
+import "../css/About.css";
+
 
 const About = () => {
   return (
