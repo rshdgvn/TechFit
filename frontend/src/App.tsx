@@ -1,78 +1,108 @@
 import { useState, useEffect } from "react";
-import type { PredictionResponse } from "./types/predictionResponse";
-import { analyzeResume } from "./api/api";
-import "./index.css"; 
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useNavigate,
+} from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import UploadCard from "./components/UploadCard";
-import HowItWorks from "./components/HowItWorks";
-import Results from "./components/Results";
 import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Results from "./components/Results";
 import ComingSoon from "./components/ComingSoon";
-import About from "./components/About";
+import type { JobSuggestion } from "./types/jobSuggestion";
+import { analyzeResume } from "./api/api";
 
-export default function App() {
+function AppContent() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const [file, setFile] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
-  const [results, setResults] = useState<PredictionResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [suggestions, setSuggestions] = useState<JobSuggestion[]>(() => {
+    const saved = localStorage.getItem("techfit_results");
+    return saved ? JSON.parse(saved) : [];
+  });
+
+  const handleReset = () => {
+    localStorage.removeItem("techfit_results"); 
+    setSuggestions([]); 
+  };
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);
 
-  const handleFileSelect = (selectedFile: File) => {
-    setFile(selectedFile);
-    setResults(null);
-    setError(null);
-  };
-
   const handleAnalyze = async () => {
     if (!file) return;
     setLoading(true);
     setError(null);
+
     try {
-      const data = await analyzeResume(file);
-      setResults(data);
-    } catch (e: any) {
-      setError(e.message || "Something went wrong. Please try again.");
+      const res = await analyzeResume(file);
+
+      setSuggestions(res.suggestions);
+
+      navigate("/results");
+    } catch (err: any) {
+      console.error(err);
+      setError(
+        err.message ||
+          "Failed to analyze resume. Make sure the backend is running!",
+      );
     } finally {
       setLoading(false);
     }
-  };
-
-  const handleReset = () => {
-    setFile(null);
-    setResults(null);
-    setError(null);
   };
 
   return (
     <div className="app-shell">
       <Navbar theme={theme} setTheme={setTheme} />
 
-      {!results ? (
-        <>
-          <section className="hero">
-            <Hero />
-            <UploadCard 
-              file={file} 
-              onFileSelect={handleFileSelect} 
-              onAnalyze={handleAnalyze} 
-              loading={loading} 
-              error={error} 
-            />
-          </section>
-          <About />
-          <HowItWorks />
-          <ComingSoon />
-        </>
-      ) : (
-        <Results suggestions={results.suggestions} onReset={handleReset} />
-      )}
+      <main>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home
+                file={file}
+                onFileSelect={setFile}
+                onAnalyze={handleAnalyze}
+                loading={loading}
+                error={error}
+              />
+            }
+          />
+
+          <Route
+            path="/results"
+            element={
+              <Results
+                suggestions={suggestions}
+                onReset={() => {
+                  setFile(null);
+                  setSuggestions([]);
+                  navigate("/");
+                  handleReset();
+                }}
+              />
+            }
+          />
+
+          <Route path="/coming-soon" element={<ComingSoon />} />
+        </Routes>
+      </main>
 
       <Footer />
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <Router>
+      <AppContent />
+    </Router>
   );
 }

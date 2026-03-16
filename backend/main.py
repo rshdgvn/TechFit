@@ -73,7 +73,8 @@ async def predict_job(file: UploadFile = File(...)):
         suggestions.append({
             "job_title": role_data['Job Title'],
             "confidence": round(score * 100, 2),
-            "required_skills": role_data['Skills'] 
+            "required_skills": role_data['Skills'],
+            "job_description": role_data['Job Description'],
         })
         
     return {
