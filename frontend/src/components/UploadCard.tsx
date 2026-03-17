@@ -86,7 +86,7 @@ export default function UploadCard({ file, onFileSelect, onClearFile, onAnalyze,
                     {loading ? (
                       <>
                         <div className="spin spinner-small" />
-                        Analyzing AI Match...
+                        Techfit Analyzing...
                       </>
                     ) : (
                       <>

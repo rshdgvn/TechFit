@@ -47,7 +47,7 @@ export default function Hero({
 
           <p className="hero-p" style={{ animation: "fadeUp 0.5s 0.2s both" }}>
             Not sure which tech career suits you? Upload your resume and
-            Techfit's AI will analyze your skills and experience — then match
+            Techfit's will analyze your skills and experience — then match
             you to the exact roles where you'll thrive most.
           </p>
 
