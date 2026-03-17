@@ -9,7 +9,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Results from "./components/Results";
-import ComingSoon from "./components/ComingSoon";
+import ComingSoon from "./pages/ComingSoon";
 import type { JobSuggestion } from "./types/jobSuggestion";
 import { analyzeResume } from "./api/api";
 

@@ -11,7 +11,6 @@ from sklearn.metrics.pairwise import cosine_similarity
 from utils.parser import extract_text_from_file
 from utils.processor import clean_resume_text, extract_skills
 
-# 1. Initialize globals so the endpoint can access them later
 df_roles = pd.DataFrame()
 role_embeddings = None
 embedding_model = None
@@ -20,7 +19,6 @@ known_skills = []
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_DIR = os.path.join(BASE_DIR, "models")
 
-# 2. Load heavy models inside the lifespan AFTER Uvicorn binds to the port
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     global df_roles, role_embeddings, embedding_model, known_skills
@@ -33,7 +31,6 @@ async def lifespan(app: FastAPI):
         embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
         print("Semantic Matching Models loaded successfully.")
         
-        # Build known_skills array
         temp_skills = set()
         if not df_roles.empty:
             for skill_str in df_roles['Skills'].dropna():
@@ -58,6 +55,10 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.get("/")
+async def root():
+    return {"message": "Welcome to the Techfit"}
 
 @app.post("/predict")
 async def predict_job(file: UploadFile = File(...)):
