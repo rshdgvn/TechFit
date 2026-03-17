@@ -1,10 +1,5 @@
 import { useState, useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useNavigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -18,6 +13,9 @@ function AppContent() {
   const [file, setFile] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  
+  const [analyzedCount, setAnalyzedCount] = useState<number>(30); 
+
   const [suggestions, setSuggestions] = useState<JobSuggestion[]>(() => {
     const saved = localStorage.getItem("techfit_results");
     return saved ? JSON.parse(saved) : [];
@@ -34,6 +32,10 @@ function AppContent() {
     document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);
 
+  const onClearFile = () => {
+    setFile(null);
+  }
+
   const handleAnalyze = async () => {
     if (!file) return;
     setLoading(true);
@@ -41,16 +43,16 @@ function AppContent() {
 
     try {
       const res = await analyzeResume(file);
-
       setSuggestions(res.suggestions);
+      
+      if (res.new_count) {
+        setAnalyzedCount(res.new_count);
+      }
 
       navigate("/results");
     } catch (err: any) {
       console.error(err);
-      setError(
-        err.message ||
-          "Failed to analyze resume. Make sure the backend is running!",
-      );
+      setError(err.message || "Failed to analyze resume. Make sure the backend is running!");
     } finally {
       setLoading(false);
     }
@@ -59,7 +61,6 @@ function AppContent() {
   return (
     <div className="app-shell">
       <Navbar theme={theme} setTheme={setTheme} />
-
       <main>
         <Routes>
           <Route
@@ -71,10 +72,11 @@ function AppContent() {
                 onAnalyze={handleAnalyze}
                 loading={loading}
                 error={error}
+                analyzedCount={analyzedCount} 
+                onClearFile={onClearFile}
               />
             }
           />
-
           <Route
             path="/results"
             element={
@@ -89,11 +91,9 @@ function AppContent() {
               />
             }
           />
-
           <Route path="/coming-soon" element={<ComingSoon />} />
         </Routes>
       </main>
-
       <Footer />
     </div>
   );

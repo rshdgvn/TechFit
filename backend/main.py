@@ -4,12 +4,26 @@ from contextlib import asynccontextmanager
 import joblib
 import pandas as pd
 import numpy as np
+import gc
 import os
 import re
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 from utils.parser import extract_text_from_file
 from utils.processor import clean_resume_text, extract_skills
+from supabase import create_client, Client
+from dotenv import load_dotenv
+
+load_dotenv()
+
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY")
+
+if SUPABASE_URL and SUPABASE_KEY:
+    supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+    print(supabase.table("analytics"))
+else:
+    supabase = None
 
 df_roles = pd.DataFrame()
 role_embeddings = None
@@ -45,6 +59,10 @@ async def lifespan(app: FastAPI):
         print(f"Warning: Could not load models. Error: {e}")
         
     yield
+    df_roles = pd.DataFrame()
+    role_embeddings = None
+    embedding_model = None
+    gc.collect()
 
 app = FastAPI(lifespan=lifespan)
 
@@ -78,6 +96,20 @@ async def predict_job(file: UploadFile = File(...)):
     top_indices = np.argsort(similarities)[::-1][:3]
     
     suggestions = []
+    new_count = None
+
+    if supabase:
+        try:
+            response = supabase.table("analytics").select("resumes_analyzed").eq("id", 1).execute()
+            current_count = response.data[0]["resumes_analyzed"]
+            
+            new_count = current_count + 1
+            supabase.table("analytics").update({"resumes_analyzed": new_count}).eq("id", 1).execute()
+            print(f"Successfully updated count to: {new_count}")
+        except Exception as e:
+            print(f"Failed to update analytics: {e}")
+            pass
+        
     for i in top_indices:
         score = float(similarities[i])
         role_data = df_roles.iloc[i]
@@ -92,7 +124,8 @@ async def predict_job(file: UploadFile = File(...)):
     return {
         "filename": file.filename,
         "extracted_skills": detected_skills,
-        "suggestions": suggestions
+        "suggestions": suggestions,
+        "new_count": new_count
     }
 
 if __name__ == "__main__":

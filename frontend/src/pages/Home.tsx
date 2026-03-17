@@ -1,5 +1,4 @@
 import Hero from "../components/Hero";
-import UploadCard from "../components/UploadCard";
 import About from "../components/About";
 import HowItWorks from "../components/HowItWorks";
 
@@ -9,19 +8,30 @@ interface HomeProps {
   onAnalyze: () => void;
   loading: boolean;
   error: string | null;
+  analyzedCount: number;
+  onClearFile: () => void;
 }
 
-export default function Home({ file, onFileSelect, onAnalyze, loading, error }: HomeProps) {
+export default function Home({
+  file,
+  onFileSelect,
+  onAnalyze,
+  loading,
+  error,
+  analyzedCount,
+  onClearFile,
+}: HomeProps) {
   return (
     <>
-      <section className="hero">
-        <Hero />
-        <UploadCard 
-          file={file} 
-          onFileSelect={onFileSelect} 
-          onAnalyze={onAnalyze} 
-          loading={loading} 
-          error={error} 
+      <section className="hero" style={{ width: "100%" }}>
+        <Hero
+          analyzedCount={analyzedCount}
+          file={file}
+          onFileSelect={onFileSelect}
+          onAnalyze={onAnalyze}
+          loading={loading}
+          error={error}
+          onClearFile={onClearFile}
         />
       </section>
       <About />

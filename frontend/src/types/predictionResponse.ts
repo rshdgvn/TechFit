@@ -4,4 +4,5 @@ export interface PredictionResponse {
   filename: string;
   extracted_skills: string[];
   suggestions: JobSuggestion[];
+  new_count?: number;
 }
