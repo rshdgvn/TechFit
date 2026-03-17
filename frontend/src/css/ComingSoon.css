@@ -1,0 +1,33 @@
+.coming-soon-section { padding: 80px 24px; display: flex; justify-content: center; }
+.cs-inner { max-width: 700px; width: 100%; }
+.cs-header { text-align: center; margin-bottom: 50px; }
+.cs-title { font-size: 2.5rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.02em; }
+.cs-subtitle { font-size: 1.1rem; opacity: 0.7; max-width: 500px; margin: 0 auto; line-height: 1.5; }
+
+.cs-timeline { display: flex; flex-direction: column; gap: 24px; }
+.cs-timeline-item { display: flex; gap: 24px; opacity: 0.85; transition: opacity 0.3s ease; }
+.cs-timeline-item:hover { opacity: 1; }
+.cs-timeline-marker { display: flex; flex-direction: column; align-items: center; margin-top: 6px; }
+.cs-marker-dot {
+  width: 14px; height: 14px; border-radius: 50%;
+  background: #2563eb; box-shadow: 0 0 12px rgba(37, 99, 235, 0.6); z-index: 2; flex-shrink: 0;
+}
+.cs-marker-line {
+  width: 2px; height: 100%; min-height: 60px;
+  background: rgba(37, 99, 235, 0.2); margin-top: 8px;
+}
+.cs-timeline-item:last-child .cs-marker-line { display: none; }
+.cs-timeline-content {
+  background: rgba(128, 128, 128, 0.05); border: 1px solid rgba(128, 128, 128, 0.1);
+  border-radius: 16px; padding: 24px; flex: 1; transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.cs-timeline-item:hover .cs-timeline-content {
+  transform: translateX(8px); border-color: rgba(37, 99, 235, 0.3);
+}
+.cs-badge {
+  display: inline-block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.05em; padding: 4px 12px; border-radius: 99px; background: rgba(37, 99, 235, 0.1);
+  color: #2563eb; margin-bottom: 12px;
+}
+.cs-item-title { font-size: 1.25rem; font-weight: 600; margin-bottom: 8px; }
+.cs-item-desc { font-size: 0.95rem; line-height: 1.6; opacity: 0.8; margin: 0; }

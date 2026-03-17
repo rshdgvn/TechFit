@@ -1,4 +1,5 @@
 import { UploadIcon, ProcessIcon, OutputIcon } from "./Icons";
+import "../css/HowItWorks.css";
 
 export default function HowItWorks() {
   const steps = [

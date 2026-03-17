@@ -1,4 +1,6 @@
 import { goals } from "../constants/goals";
+import "../css/ComingSoon.css";
+
 
 const ComingSoon = () => {
   return (

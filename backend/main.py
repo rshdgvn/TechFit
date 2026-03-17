@@ -2,9 +2,11 @@ from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 import joblib
 import pandas as pd
+import numpy as np
 import os
 import re
-
+from sentence_transformers import SentenceTransformer
+from sklearn.metrics.pairwise import cosine_similarity
 from utils.parser import extract_text_from_file
 from utils.processor import clean_resume_text, extract_skills
 
@@ -19,55 +21,60 @@ app.add_middleware(
 )
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_DIR = os.path.join(BASE_DIR, "models")
+
 
 try:
-    model = joblib.load(os.path.join(BASE_DIR, "models", "rf_classifier.pkl"))
-    tfidf = joblib.load(os.path.join(BASE_DIR, "models", "tfidf_vectorizer.pkl"))
-    le = joblib.load(os.path.join(BASE_DIR, "models", "label_encoder.pkl"))
-    print("Machine Learning Models loaded successfully.")
+    print("Loading model artifacts...")
+    df_roles = joblib.load(os.path.join(MODEL_DIR, "roles_dataframe.pkl"))
+    role_embeddings = np.load(os.path.join(MODEL_DIR, "role_embeddings.npy"))
+    
+    print("Loading Sentence Transformer model...")
+    embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
+    print("Semantic Matching Models loaded successfully.")
 except Exception as e:
-    print(f"Warning: Could not load .pkl models. Did you run train_model.py? Error: {e}")
+    print(f"Warning: Could not load models. Did you run initialize_model.py? Error: {e}")
+    df_roles = pd.DataFrame() 
 
-DATA_PATH = os.path.join(BASE_DIR, "data", "resume_data.csv")
+
 known_skills = set()
-
-df = pd.read_csv(DATA_PATH)
-df.columns = [col.strip().replace('\ufeff', '') for col in df.columns]
-
-for skill_str in df['skills'].dropna():
-    skill_str = str(skill_str)
-    
-    clean_str = skill_str.replace('[', '').replace(']', '').replace("'", "").replace('"', "")
-    skills_list = re.split(r'[,\n]', clean_str)
-    
-    for skill in skills_list:
-        clean_skill = skill.strip()
-        if clean_skill: 
-            known_skills.add(clean_skill)
-            
+if not df_roles.empty:
+    for skill_str in df_roles['Skills'].dropna():
+        skill_str = str(skill_str)
+        skills_list = re.split(r'[,\n]', skill_str)
+        
+        for skill in skills_list:
+            clean_skill = skill.strip()
+            if clean_skill: 
+                known_skills.add(clean_skill)
+                
 known_skills = list(known_skills)
-    
+
+
 @app.post("/predict")
 async def predict_job(file: UploadFile = File(...)):
     contents = await file.read()
     
     raw_text = extract_text_from_file(contents, file.filename)        
     detected_skills = extract_skills(raw_text, known_skills)    
+    clean_text = clean_resume_text(raw_text)
+    text_to_embed = f"Skills: {', '.join(detected_skills)}. Experience: {clean_text}"
+    resume_embedding = embedding_model.encode([text_to_embed.lower()])
     
-    skills_only_text = " ".join(detected_skills)
+    similarities = cosine_similarity(resume_embedding, role_embeddings)[0]
     
-    if not skills_only_text:
-        skills_only_text = clean_resume_text(raw_text)
-        
-    vectorized = tfidf.transform([skills_only_text])
-    probabilities = model.predict_proba(vectorized)[0]
-    top_indices = probabilities.argsort()[-3:][::-1]
+    top_indices = np.argsort(similarities)[::-1][:3]
     
     suggestions = []
     for i in top_indices:
+        score = float(similarities[i])
+        role_data = df_roles.iloc[i]
+        
         suggestions.append({
-            "job_title": le.inverse_transform([i])[0],
-            "confidence": round(float(probabilities[i]) * 100, 2)
+            "job_title": role_data['Job Title'],
+            "confidence": round(score * 100, 2),
+            "required_skills": role_data['Skills'],
+            "job_description": role_data['Job Description'],
         })
         
     return {

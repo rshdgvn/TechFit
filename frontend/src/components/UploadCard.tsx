@@ -1,6 +1,7 @@
 import { useCallback } from "react";
 import { useDropzone } from "react-dropzone";
 import { IcoAlert, IcoFile, IcoScan, IcoUpload } from "./Icons";
+import "../css/UploadCard.css"; 
 
 interface UploadCardProps {
   file: File | null;
