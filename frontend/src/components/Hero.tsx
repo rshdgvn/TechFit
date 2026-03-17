@@ -30,7 +30,7 @@ export default function Hero({
           >
             <span className="eyebrow-dot"></span>
             <span className="eyebrow-text">
-              Explore <strong>299+</strong> paths in tech
+              Explore <strong>289+</strong> paths in tech
             </span>
             <span className="eyebrow-sep">·</span>
             <span className="eyebrow-sub">Discover where your skills truly fit.</span>
@@ -60,7 +60,7 @@ export default function Hero({
                 <IcoTarget />
               </span>
               <span>
-                <strong>299+</strong> Tech Roles
+                <strong>289+</strong> Tech Roles
               </span>
             </div>
             <div className="stat-divider"></div>

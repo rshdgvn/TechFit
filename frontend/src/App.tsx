@@ -7,6 +7,7 @@ import Results from "./components/Results";
 import ComingSoon from "./pages/ComingSoon";
 import type { JobSuggestion } from "./types/jobSuggestion";
 import { analyzeResume } from "./api/api";
+import { supabase } from "./utils/supabase";
 
 function AppContent() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
@@ -14,7 +15,24 @@ function AppContent() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   
-  const [analyzedCount, setAnalyzedCount] = useState<number>(30); 
+  const [analyzedCount, setAnalyzedCount] = useState<number>(0);
+
+  useEffect(() => {
+    const fetchAnalytics = async () => {
+      const { data, error } = await supabase
+        .from("analytics") 
+        .select("resumes_analyzed")
+        .single(); 
+
+      if (data && !error) {
+        setAnalyzedCount(data.resumes_analyzed);
+      } else {
+        console.error("Error fetching count:", error);
+      }
+    };
+
+    fetchAnalytics();
+  }, []);
 
   const [suggestions, setSuggestions] = useState<JobSuggestion[]>(() => {
     const saved = localStorage.getItem("techfit_results");

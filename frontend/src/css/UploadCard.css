@@ -1,6 +1,7 @@
 .upload-card-wrapper {
   position: relative;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .upload-card-glow {
@@ -48,21 +49,18 @@
     0 28px 56px rgba(0,0,0,0.05);
 }
 
-/* ── Blue top accent bar ── */
 .card-top-bar {
   height: 4px;
   background: linear-gradient(90deg, var(--accent) 0%, #60a5fa 65%, #93c5fd 100%);
   flex-shrink: 0;
 }
 
-/* ── Card body ── */
 .card-body {
   padding: 22px 20px 20px;
   display: flex;
   flex-direction: column;
 }
 
-/* ── Card header ── */
 .card-header {
   display: flex;
   align-items: center;
@@ -105,7 +103,6 @@
 .upload-content-area {
   display: flex;
   flex-direction: column;
-  min-height: 230px;
 }
 
 .dz {
@@ -121,7 +118,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 230px;
 }
 .dz:hover, .dz.active {
   border-color: var(--accent);
@@ -209,10 +205,6 @@
 
 .file-pill-container {
   animation: fadeUp 0.28s ease-out both;
-  min-height: 230px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 .file-pill {
   background: var(--accent-light);
