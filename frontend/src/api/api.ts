@@ -14,8 +14,13 @@ export const analyzeResume = async (file: File): Promise<PredictionResponse> => 
       },
     });
     return response.data;
-  } catch (error) {
+  } catch (error: any) {
     console.error("Error uploading the resume:", error);
-    throw new Error("Failed to analyze resume. Make sure the backend is running!");
+  
+    if (error.response?.data?.error) {
+      throw new Error(error.response.data.error);
+    }
+
+    throw new Error("Techfit couldn’t process your resume right now. Please try again.");
   }
 };
