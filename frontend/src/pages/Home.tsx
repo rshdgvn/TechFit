@@ -1,6 +1,7 @@
 import Hero from "../components/Hero";
 import About from "../components/About";
 import HowItWorks from "../components/HowItWorks";
+import WhoIsThisFor from "../components/WhoIsThisFor";
 
 interface HomeProps {
   file: File | null;

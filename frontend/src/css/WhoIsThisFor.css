@@ -1,0 +1,205 @@
+.witf-section {
+  background: var(--bg);
+  transition: background 0.3s;
+}
+
+.witf-wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 60px 24px 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 52px;
+}
+
+/* ── Header ── */
+.witf-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.witf-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  background: var(--accent-light);
+  border: 1px solid var(--accent-border);
+  padding: 5px 13px;
+  border-radius: 99px;
+}
+
+.witf-heading {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
+  font-size: clamp(2rem, 4vw, 2.9rem);
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.witf-subtext {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.72;
+  max-width: 540px;
+  margin: 0;
+}
+
+/* ── Pull quote ── */
+.witf-quote-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px 30px;
+  width: 100%;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+.witf-quote-block::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  right: 24px;
+  font-size: 7rem;
+  font-weight: 900;
+  color: var(--accent);
+  opacity: 0.06;
+  line-height: 1;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  pointer-events: none;
+  user-select: none;
+}
+
+.witf-quote-bar {
+  width: 3px;
+  min-height: 100%;
+  align-self: stretch;
+  background: linear-gradient(180deg, var(--accent) 0%, #60a5fa 100%);
+  border-radius: 99px;
+  flex-shrink: 0;
+}
+
+.witf-quote {
+  font-size: 0.97rem;
+  color: var(--text-secondary);
+  line-height: 1.78;
+  font-style: normal;
+  margin: 0;
+}
+.witf-quote em {
+  font-style: italic;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* ── Cards ── */
+.witf-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+.witf-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: var(--shadow-sm);
+  transition:
+    border-color 0.22s ease,
+    box-shadow 0.22s ease,
+    transform 0.22s ease;
+}
+.witf-card:hover {
+  border-color: var(--accent-border);
+  box-shadow: 0 6px 24px rgba(37, 99, 235, 0.08);
+  transform: translateY(-3px);
+}
+
+.witf-card-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+  width: 44px;
+  height: 44px;
+  background: var(--accent-light);
+  border: 1px solid var(--accent-border);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  flex-shrink: 0;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+.witf-card-icon svg {
+  width: 20px;
+  height: 20px;
+}
+.witf-card:hover .witf-card-icon {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.witf-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.witf-card-title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.witf-card-desc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.68;
+  margin: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 720px) {
+  .witf-wrapper {
+    padding: 64px 20px 72px;
+    gap: 40px;
+  }
+  .witf-cards {
+    grid-template-columns: 1fr;
+  }
+  .witf-quote-block {
+    padding: 22px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .witf-quote {
+    font-size: 0.88rem;
+  }
+}

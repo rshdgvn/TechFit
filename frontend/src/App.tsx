@@ -8,9 +8,11 @@ import ComingSoon from "./pages/ComingSoon";
 import type { JobSuggestion } from "./types/jobSuggestion";
 import { analyzeResume } from "./api/api";
 import { supabase } from "./utils/supabase";
+import Purpose from "./pages/Purpose";
+import Features from "./pages/Features";
 
 function AppContent() {
-  const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [theme, setTheme] = useState<"light" | "dark">("dark");
   const [file, setFile] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -110,6 +112,8 @@ function AppContent() {
             }
           />
           <Route path="/coming-soon" element={<ComingSoon />} />
+          <Route path="/purpose" element={<Purpose/>} />
+          <Route path="/features" element={<Features/>} />
         </Routes>
       </main>
       <Footer />

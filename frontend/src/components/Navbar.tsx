@@ -14,7 +14,7 @@ export default function Navbar({ theme, setTheme }: NavbarProps) {
   const location = useLocation();
 
   const closeMenu = () => setIsMenuOpen(false);
-  const toggleTheme = () => setTheme(t => t === "light" ? "dark" : "light");
+  const toggleTheme = () => setTheme((t) => (t === "light" ? "dark" : "light"));
 
   useEffect(() => {
     const handleResize = () => {
@@ -31,19 +31,19 @@ export default function Navbar({ theme, setTheme }: NavbarProps) {
   }, []);
 
   // Close mobile menu on route change
-  useEffect(() => { closeMenu(); }, [location.pathname]);
+  useEffect(() => {
+    closeMenu();
+  }, [location.pathname]);
 
   return (
     <nav className={`navbar${scrolled ? " scrolled" : ""}`}>
       <div className="navbar-inner">
-
         {/* Logo */}
         <Link to="/" className="logo-link" onClick={closeMenu}>
           <img src="/icon.svg" alt="Techfit" className="logo-img" />
           <span className="logo-text">Techfit</span>
         </Link>
 
-        {/* Desktop nav */}
         <div className="nav-links">
           <Link
             to="/"
@@ -52,14 +52,19 @@ export default function Navbar({ theme, setTheme }: NavbarProps) {
             Home
           </Link>
           <Link
-            to="/coming-soon"
+            to="/purpose"
+            className={`nav-item${location.pathname === "/purpose" ? " active" : ""}`}
+          >
+            Purpose
+          </Link>
+          <Link
+            to="/features"
             className={`nav-item${location.pathname === "/coming-soon" ? " active" : ""}`}
           >
-            Coming Soon
+            Features
           </Link>
         </div>
 
-        {/* Right actions */}
         <div className="nav-actions">
           <button
             className="theme-btn desktop-theme-btn"
@@ -73,7 +78,7 @@ export default function Navbar({ theme, setTheme }: NavbarProps) {
 
           <button
             className="theme-btn mobile-menu-btn"
-            onClick={() => setIsMenuOpen(o => !o)}
+            onClick={() => setIsMenuOpen((o) => !o)}
             aria-label="Toggle menu"
             aria-expanded={isMenuOpen}
           >
@@ -84,7 +89,6 @@ export default function Navbar({ theme, setTheme }: NavbarProps) {
         </div>
       </div>
 
-      {/* Mobile dropdown */}
       <div className={`mobile-dropdown${isMenuOpen ? " open" : ""}`}>
         <Link
           to="/"
@@ -94,13 +98,23 @@ export default function Navbar({ theme, setTheme }: NavbarProps) {
           Home
         </Link>
         <Link
-          to="/coming-soon"
+          to="/purpose"
+          className={`mobile-nav-item${location.pathname === "/purpose" ? " active" : ""}`}
+          onClick={closeMenu}
+        >
+          Purpose
+        </Link>
+        <Link
+          to="/features"
           className={`mobile-nav-item${location.pathname === "/coming-soon" ? " active" : ""}`}
           onClick={closeMenu}
         >
-          Coming Soon
+          Features
         </Link>
-        <button className="mobile-nav-item mobile-theme-toggle" onClick={toggleTheme}>
+        <button
+          className="mobile-nav-item mobile-theme-toggle"
+          onClick={toggleTheme}
+        >
           <span>Switch to {theme === "light" ? "dark" : "light"} mode</span>
           {theme === "light" ? <IcoMoon /> : <IcoSun />}
         </button>

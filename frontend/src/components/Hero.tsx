@@ -11,114 +11,101 @@ export default function Hero({
   loading,
   error,
 }: any) {
-  const trustItems = [
-    "Securely analyzed locally",
-    "Matches in under 10 seconds",
-    "No account required",
-  ];
-
   return (
     <div className="hero-wrapper" style={{ animation: "fadeUp 0.55s both" }}>
-      <div className="hero-glow-blob"></div>
-      <div className="hero-glow-blob hero-glow-blob--secondary"></div>
+      <div className="hero-glow-blob" />
+      <div className="hero-glow-blob hero-glow-blob--secondary" />
 
-      <div className="hero-grid">
-        <div className="hero-left">
-          <div
-            className="hero-eyebrow"
-            style={{ animation: "fadeUp 0.5s 0.1s both" }}
+      <div className="hero-eyebrow" style={{ animation: "fadeUp 0.5s 0.1s both" }}>
+        <span className="eyebrow-dot" />
+        <span className="eyebrow-text">
+          Explore <strong>289+</strong> paths in tech
+        </span>
+        <span className="eyebrow-sep">·</span>
+        <span className="eyebrow-sub">Discover where your skills truly fit.</span>
+      </div>
+
+      <h1 className="hero-h1" style={{ animation: "fadeUp 0.5s 0.15s both" }}>
+        Find your perfect role in{" "}
+        <em className="hero-highlight">tech.</em>
+      </h1>
+
+      <p className="hero-p" style={{ animation: "fadeUp 0.5s 0.2s both" }}>
+        Not sure which tech career suits you? Upload your resume and
+        Techfit will analyze your skills and experience — then match
+        you to the exact roles where you'll thrive most.
+      </p>
+
+      <div className="hero-stats-flat" style={{ animation: "fadeUp 0.5s 0.25s both" }}>
+        <div className="stat-item">
+          <span className="stat-icon"><IcoTarget /></span>
+          <span><strong>289+</strong> Tech Roles</span>
+        </div>
+        <div className="stat-divider" />
+        <div className="stat-item">
+          <span className="stat-icon"><IcoChart /></span>
+          <span><strong>{analyzedCount || 0}+</strong> Analyzed</span>
+        </div>
+        <div className="stat-divider" />
+        <div className="stat-item">
+          <span className="stat-icon"><IcoBrain /></span>
+          <span><strong>1k+</strong> Skills Mapped</span>
+        </div>
+      </div>
+
+      <div className="hero-upload-section" style={{ animation: "fadeUp 0.5s 0.3s both", width: "100%" }}>
+
+        <div className="hero-cta-pair">
+          <button
+            className="btn-cta-primary"
+            onClick={() => alert("Manual entry feature coming soon!")}
           >
-            <span className="eyebrow-dot"></span>
-            <span className="eyebrow-text">
-              Explore <strong>289+</strong> paths in tech
-            </span>
-            <span className="eyebrow-sep">·</span>
-            <span className="eyebrow-sub">Discover where your skills truly fit.</span>
-          </div>
-
-          <h1
-            className="hero-h1"
-            style={{ animation: "fadeUp 0.5s 0.15s both" }}
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M8 1v14M1 8h14" />
+            </svg>
+            No resume? Start here
+          </button>
+          <button
+            className="btn-cta-ghost"
+            onClick={() => document.getElementById("how-it-works")?.scrollIntoView({ behavior: "smooth" })}
           >
-            Find your perfect
-            <br />
-            role in <em className="hero-highlight">tech.</em>
-          </h1>
-
-          <p className="hero-p" style={{ animation: "fadeUp 0.5s 0.2s both" }}>
-            Not sure which tech career suits you? Upload your resume and
-            Techfit's will analyze your skills and experience — then match
-            you to the exact roles where you'll thrive most.
-          </p>
-
-          <div
-            className="hero-stats-flat"
-            style={{ animation: "fadeUp 0.5s 0.3s both" }}
-          >
-            <div className="stat-item">
-              <span className="stat-icon">
-                <IcoTarget />
-              </span>
-              <span>
-                <strong>289+</strong> Tech Roles
-              </span>
-            </div>
-            <div className="stat-divider"></div>
-            <div className="stat-item">
-              <span className="stat-icon">
-                <IcoChart />
-              </span>
-              <span>
-                <strong>{analyzedCount || 0}+</strong> Analyzed
-              </span>
-            </div>
-            <div className="stat-divider"></div>
-            <div className="stat-item">
-              <span className="stat-icon">
-                <IcoBrain />
-              </span>
-              <span>
-                <strong>1k+</strong> Skills Mapped
-              </span>
-            </div>
-          </div>
-
-          <div
-            className="hero-trust-left"
-            style={{ animation: "fadeUp 0.5s 0.4s both" }}
-          >
-            {trustItems.map((text) => (
-              <div className="trust-item-left" key={text}>
-                <span className="trust-icon-left">
-                  <IcoCheck />
-                </span>
-                <span>{text}</span>
-              </div>
-            ))}
-          </div>
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="8" cy="8" r="7" />
+              <path d="M8 7v4M8 5h.01" />
+            </svg>
+            See how it works
+          </button>
         </div>
 
-        <div
-          className="hero-right"
-          style={{ animation: "fadeUp 0.5s 0.2s both" }}
-        >
-          <UploadCard
-            file={file}
-            onFileSelect={onFileSelect}
-            onClearFile={onClearFile}
-            onAnalyze={onAnalyze}
-            loading={loading}
-            error={error}
-          />
+        <UploadCard
+          file={file}
+          onFileSelect={onFileSelect}
+          onClearFile={onClearFile}
+          onAnalyze={onAnalyze}
+          loading={loading}
+          error={error}
+        />
 
-          <div className="manual-entry-container">
-            <span className="manual-divider">or</span>
-            <button
-              className="btn-manual-entry-blue"
-              onClick={() => alert("Manual entry feature coming soon!")}
-            >
-              Don't have a resume? Start here
-            </button>
+        <div className="hero-secure-strip">
+          <div className="secure-strip-item">
+            <span className="secure-strip-icon">
+              <IcoCheck />
+            </span>
+            <span>Analyzed locally</span>
+          </div>
+          <div className="secure-strip-divider" />
+          <div className="secure-strip-item">
+            <span className="secure-strip-icon">
+              <IcoCheck />
+            </span>
+            <span>Under 10 seconds</span>
+          </div>
+          <div className="secure-strip-divider" />
+          <div className="secure-strip-item">
+            <span className="secure-strip-icon">
+              <IcoCheck />
+            </span>
+            <span>No account needed</span>
           </div>
         </div>
       </div>

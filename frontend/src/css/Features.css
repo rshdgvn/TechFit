@@ -1,0 +1,301 @@
+.feat-section {
+  background: var(--bg);
+  transition: background 0.3s;
+}
+
+.feat-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 60px 24px 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 52px;
+}
+
+/* ── Header ── */
+.feat-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.feat-label {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  background: var(--accent-light);
+  border: 1px solid var(--accent-border);
+  padding: 5px 13px;
+  border-radius: 99px;
+}
+
+.feat-heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin: 0;
+  max-width: 540px;
+}
+
+.feat-subtext {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 460px;
+  margin: 0;
+}
+
+.feat-bento {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto;
+  gap: 14px;
+  width: 100%;
+}
+
+.feat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease;
+  position: relative;
+  overflow: hidden;
+}
+.feat-card:hover {
+  border-color: var(--accent-border);
+  box-shadow: 0 8px 28px rgba(37, 99, 235, 0.08);
+  transform: translateY(-2px);
+}
+
+.feat-card--wide {
+  grid-column: span 2;
+}
+
+.feat-card--tall {
+  grid-row: span 2;
+}
+
+.feat-card--accent {
+  background: var(--bg-card);
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.feat-card--accent::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent) 0%, #60a5fa 100%);
+  border-radius: 18px 18px 0 0;
+}
+
+.feat-card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 180px;
+}
+
+.feat-card-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 2px;
+  flex-shrink: 0;
+  padding: 10px 16px;
+  background: var(--accent-light);
+  border: 1px solid var(--accent-border);
+  border-radius: 12px;
+  align-self: center;
+}
+.feat-stat-number {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+.feat-stat-label {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.feat-card--coming-soon {
+  background: var(--bg-card);
+  border-style: dashed;
+  border-color: var(--border-hover);
+}
+.feat-card--coming-soon:hover {
+  border-color: var(--accent-border);
+  border-style: dashed;
+}
+
+.feat-coming-soon-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent-light);
+  border: 1px solid var(--accent-border);
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 4px 11px;
+  border-radius: 99px;
+  width: fit-content;
+}
+.feat-coming-soon-badge svg {
+  width: 13px;
+  height: 13px;
+}
+
+/* ── Card icon ── */
+.feat-card-icon {
+  width: 42px;
+  height: 42px;
+  background: var(--accent-light);
+  border: 1px solid var(--accent-border);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  flex-shrink: 0;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.feat-card-icon svg {
+  width: 19px;
+  height: 19px;
+}
+.feat-card-icon--light {
+  background: var(--accent-light);
+}
+.feat-card:hover .feat-card-icon {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.feat-card--coming-soon:hover .feat-card-icon {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* ── Card text ── */
+.feat-card-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.97rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.015em;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.feat-card-desc {
+  font-size: 0.83rem;
+  color: var(--text-secondary);
+  line-height: 1.68;
+  margin: 0;
+}
+
+.feat-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+.feat-pill {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 3px 10px;
+  border-radius: 99px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+
+/* ── Roadmap items ── */
+.feat-roadmap-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 4px;
+}
+.feat-roadmap-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.feat-roadmap-item svg {
+  width: 14px;
+  height: 14px;
+  color: var(--accent);
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+/* ── Responsive ── */
+@media (max-width: 760px) {
+  .feat-bento {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .feat-card--wide {
+    grid-column: span 2;
+  }
+  .feat-card--tall {
+    grid-row: span 1;
+  }
+  .feat-roadmap-items {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .feat-bento {
+    grid-template-columns: 1fr;
+  }
+  .feat-card--wide {
+    grid-column: span 1;
+  }
+  .feat-card--accent {
+    flex-direction: column;
+  }
+  .feat-card-stat {
+    align-items: flex-start;
+    align-self: flex-start;
+  }
+  .feat-wrapper {
+    padding: 64px 20px 72px;
+    gap: 36px;
+  }
+}
