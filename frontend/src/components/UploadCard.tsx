@@ -34,80 +34,44 @@ export default function UploadCard({ file, onFileSelect, onClearFile, onAnalyze,
 
   return (
     <div className="upload-card-wrapper">
-      <div className="upload-card-glow" />
-      <div className="upload-card">
-
-        <div className="card-top-bar" />
-
-        <div className="card-body">
-          <div className="card-header">
-            <div>
-              <h3 className="card-title">Upload your resume</h3>
-              <p className="card-subtitle">PDF, TXT or MD · analyzed in seconds</p>
-            </div>
+      {!file ? (
+        <div {...getRootProps()} className={`upload-box${isDragActive ? " active" : ""}`}>
+          <input {...getInputProps()} />
+          <div className="upload-box-icon">
+            <IcoUpload />
           </div>
-
-          <div className="upload-content-area">
-            {!file ? (
-              <div {...getRootProps()} className={`dz${isDragActive ? " active" : ""}`}>
-                <input {...getInputProps()} />
-
-                <div className="dz-icon-cluster">
-                  <div className="dz-icon-inner">
-                    <IcoUpload />
-                  </div>
-                </div>
-
-                <p className="dz-main-text">
-                  {isDragActive ? "Drop it here!" : "Click or drag & drop"}
-                </p>
-                <p className="dz-sub-text">Drop your resume here to get started</p>
-
-                <div className="format-badges">
-                  <span className="badge">PDF</span>
-                  <span className="badge">TXT</span>
-                  <span className="badge">MD</span>
-                </div>
-              </div>
-            ) : (
-              <div className="file-pill-container">
-                <div className="file-pill">
-                  <div className="file-info">
-                    <div className="file-ico"><IcoFile /></div>
-                    <div className="file-meta">
-                      <span className="file-name">{file.name}</span>
-                      <span className="file-size">{(file.size / 1024).toFixed(1)} KB · Ready to analyze</span>
-                    </div>
-                    <button className="remove-file-btn" onClick={handleClear} title="Remove file">
-                      <IcoX />
-                    </button>
-                  </div>
-                  <button className="btn-primary w-full" onClick={onAnalyze} disabled={loading}>
-                    {loading ? (
-                      <>
-                        <div className="spin spinner-small" />
-                        Techfit Analyzing...
-                      </>
-                    ) : (
-                      <>
-                        <IcoScan />
-                        Reveal Top Matches
-                      </>
-                    )}
-                  </button>
-                </div>
-              </div>
-            )}
-          </div>
-
-          {error && (
-            <div className="error-box">
-              <IcoAlert />
-              <span>{error}</span>
-            </div>
-          )}
+          <p className="upload-box-title">
+            {isDragActive ? "Drop it here!" : "Drop your resume here"}
+          </p>
+          <p className="upload-box-sub">PDF, TXT or MD · drag & drop or click to browse</p>
         </div>
-      </div>
+      ) : (
+        <div className="upload-box upload-box--file">
+          <div className="upload-file-row">
+            <div className="upload-file-icon"><IcoFile /></div>
+            <div className="upload-file-meta">
+              <span className="upload-file-name">{file.name}</span>
+              <span className="upload-file-size">{(file.size / 1024).toFixed(1)} KB · Ready to analyze</span>
+            </div>
+            <button className="upload-file-remove" onClick={handleClear} title="Remove">
+              <IcoX />
+            </button>
+          </div>
+          <button className="upload-analyze-btn" onClick={onAnalyze} disabled={loading}>
+            {loading
+              ? <><div className="spin spinner-small" /> Analyzing...</>
+              : <><IcoScan /> Reveal Top Matches</>
+            }
+          </button>
+        </div>
+      )}
+
+      {error && (
+        <div className="upload-error">
+          <IcoAlert />
+          <span>{error}</span>
+        </div>
+      )}
     </div>
   );
 }

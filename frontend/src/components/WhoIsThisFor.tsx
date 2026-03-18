@@ -51,7 +51,7 @@ export default function WhoIsThisFor() {
 
         <div className="witf-header">
           <span className="witf-label">Purpose</span>
-          <h2 className="witf-heading">Who Is This For?</h2>
+          <h2 className="witf-heading">Who is this for?</h2>
           <p className="witf-subtext">
             Techfit was built for anyone standing at a crossroads in tech —
             whether you're just starting out, second-guessing yourself, or

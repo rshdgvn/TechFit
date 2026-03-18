@@ -12,7 +12,7 @@ export default function HowItWorks() {
     {
       num: "02",
       title: "Techfit Analysis",
-      body: "Techfit's AI reads your background contextually, mapping out your core technical skills, soft skills, and unique strengths.",
+      body: "Techfit's reads your background contextually, mapping out your core technical skills, soft skills, and unique strengths.",
       icon: <ProcessIcon />,
     },
     {

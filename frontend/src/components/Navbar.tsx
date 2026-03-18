@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { IcoMoon, IcoSun, IcoMenu, IcoClose } from "./Icons";
 import "../css/Navbar.css";
 
@@ -12,14 +12,13 @@ export default function Navbar({ theme, setTheme }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const closeMenu = () => setIsMenuOpen(false);
   const toggleTheme = () => setTheme((t) => (t === "light" ? "dark" : "light"));
 
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 650) setIsMenuOpen(false);
-    };
+    const handleResize = () => { if (window.innerWidth > 768) setIsMenuOpen(false); };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -30,50 +29,58 @@ export default function Navbar({ theme, setTheme }: NavbarProps) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on route change
-  useEffect(() => {
-    closeMenu();
-  }, [location.pathname]);
+  useEffect(() => { closeMenu(); }, [location.pathname]);
+
+  const navLinks = [
+    { to: "/", label: "Home" },
+    { to: "/purpose", label: "Purpose" },
+    { to: "/features", label: "Features" },
+  ];
 
   return (
     <nav className={`navbar${scrolled ? " scrolled" : ""}`}>
       <div className="navbar-inner">
-        {/* Logo */}
-        <Link to="/" className="logo-link" onClick={closeMenu}>
-          <img src="/icon.svg" alt="Techfit" className="logo-img" />
-          <span className="logo-text">Techfit</span>
-        </Link>
 
-        <div className="nav-links">
-          <Link
-            to="/"
-            className={`nav-item${location.pathname === "/" ? " active" : ""}`}
-          >
-            Home
+        {/* ── Left: Logo + links ── */}
+        <div className="navbar-left">
+          <Link to="/" className="logo-link" onClick={closeMenu}>
+            <img src="/icon.svg" alt="Techfit" className="logo-img" />
+            <span className="logo-text">Techfit</span>
           </Link>
-          <Link
-            to="/purpose"
-            className={`nav-item${location.pathname === "/purpose" ? " active" : ""}`}
-          >
-            Purpose
-          </Link>
-          <Link
-            to="/features"
-            className={`nav-item${location.pathname === "/coming-soon" ? " active" : ""}`}
-          >
-            Features
-          </Link>
+
+          <div className="nav-links">
+            {navLinks.map((link) => (
+              <Link
+                key={link.to}
+                to={link.to}
+                className={`nav-item${location.pathname === link.to ? " active" : ""}`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
         </div>
 
-        <div className="nav-actions">
-          <button
-            className="theme-btn desktop-theme-btn"
-            onClick={toggleTheme}
-            aria-label="Toggle theme"
-          >
+        {/* ── Right: CTAs + theme ── */}
+        <div className="navbar-right">
+          <button className="theme-btn desktop-theme-btn" onClick={toggleTheme} aria-label="Toggle theme">
             <span className="btn-icon-wrap">
               {theme === "light" ? <IcoMoon /> : <IcoSun />}
             </span>
+          </button>
+
+          <button
+            className="nav-btn-ghost"
+            onClick={() => navigate("/upload?mode=manual")}
+          >
+            No resume?
+          </button>
+
+          <button
+            className="nav-btn-primary"
+            onClick={() => navigate("/upload")}
+          >
+            Get Matched
           </button>
 
           <button
@@ -87,34 +94,30 @@ export default function Navbar({ theme, setTheme }: NavbarProps) {
             </span>
           </button>
         </div>
+
       </div>
 
+      {/* ── Mobile dropdown ── */}
       <div className={`mobile-dropdown${isMenuOpen ? " open" : ""}`}>
-        <Link
-          to="/"
-          className={`mobile-nav-item${location.pathname === "/" ? " active" : ""}`}
-          onClick={closeMenu}
-        >
-          Home
-        </Link>
-        <Link
-          to="/purpose"
-          className={`mobile-nav-item${location.pathname === "/purpose" ? " active" : ""}`}
-          onClick={closeMenu}
-        >
-          Purpose
-        </Link>
-        <Link
-          to="/features"
-          className={`mobile-nav-item${location.pathname === "/coming-soon" ? " active" : ""}`}
-          onClick={closeMenu}
-        >
-          Features
-        </Link>
-        <button
-          className="mobile-nav-item mobile-theme-toggle"
-          onClick={toggleTheme}
-        >
+        {navLinks.map((link) => (
+          <Link
+            key={link.to}
+            to={link.to}
+            className={`mobile-nav-item${location.pathname === link.to ? " active" : ""}`}
+            onClick={closeMenu}
+          >
+            {link.label}
+          </Link>
+        ))}
+        <div className="mobile-nav-ctas">
+          <button className="nav-btn-ghost w-full" onClick={() => { navigate("/upload?mode=manual"); closeMenu(); }}>
+            No resume?
+          </button>
+          <button className="nav-btn-primary w-full" onClick={() => { navigate("/upload"); closeMenu(); }}>
+            Get Matched
+          </button>
+        </div>
+        <button className="mobile-nav-item mobile-theme-toggle" onClick={toggleTheme}>
           <span>Switch to {theme === "light" ? "dark" : "light"} mode</span>
           {theme === "light" ? <IcoMoon /> : <IcoSun />}
         </button>

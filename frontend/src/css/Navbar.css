@@ -1,22 +1,20 @@
-/* ── Navbar shell ── */
+/* ── Shell ── */
 .navbar {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid transparent;
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
-
-/* Border + shadow appear only after scrolling */
 .navbar.scrolled {
   border-bottom-color: var(--border);
   box-shadow: var(--shadow-sm);
 }
 
-/* ── Inner layout ── */
+/* ── Inner ── */
 .navbar-inner {
   max-width: 1160px;
   margin: 0 auto;
@@ -25,25 +23,28 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 32px;
 }
 
-/* ── Logo ── */
+/* ── Left: logo + links ── */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .logo-link {
   display: flex;
   align-items: center;
-  gap: 9px;
+  gap: 8px;
   text-decoration: none;
   color: inherit;
   flex-shrink: 0;
+  margin-right: 8px;
 }
-.logo-img {
-  height: 28px;
-  width: 28px;
-}
+.logo-img { height: 28px; width: 28px; }
 .logo-text {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 800;
   letter-spacing: -0.03em;
   color: var(--text-primary);
@@ -53,11 +54,8 @@
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 4px;
-  flex: 1;
-  justify-content: center;
+  gap: 2px;
 }
-
 .nav-item {
   text-decoration: none;
   font-size: 0.875rem;
@@ -66,7 +64,6 @@
   padding: 6px 12px;
   border-radius: 8px;
   transition: color 0.18s ease, background 0.18s ease;
-  position: relative;
 }
 .nav-item:hover {
   color: var(--text-primary);
@@ -78,20 +75,67 @@
   background: var(--bg-alt);
 }
 
-/* ── Right actions ── */
-.nav-actions {
+/* ── Right: CTAs + theme ── */
+.navbar-right {
   display: flex;
   align-items: center;
   gap: 8px;
-  flex-shrink: 0;
 }
 
-/* ── Theme / menu button ── */
+/* ── Ghost CTA ── */
+.nav-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 7px 14px;
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: border-color 0.18s ease, color 0.18s ease, background 0.18s ease;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+}
+.nav-btn-ghost:hover {
+  border-color: var(--border-hover);
+  color: var(--text-primary);
+  background: var(--bg-alt);
+}
+
+/* ── Primary CTA ── */
+.nav-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.18s ease, transform 0.15s ease, box-shadow 0.18s ease;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+  box-shadow: 0 1px 6px rgba(37,99,235,0.22);
+}
+.nav-btn-primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 12px rgba(37,99,235,0.3);
+}
+
+/* ── Theme button ── */
 .theme-btn {
   background: transparent;
   border: 1px solid var(--border);
-  border-radius: 9px;
-  /* Fixed size — icon cannot push this larger */
+  border-radius: 8px;
   width: 34px;
   height: 34px;
   padding: 0;
@@ -109,18 +153,6 @@
   color: var(--text-primary);
   background: var(--bg-alt);
 }
-.theme-btn svg {
-  width: 16px;
-  height: 16px;
-  min-width: 16px;
-  min-height: 16px;
-  max-width: 16px;
-  max-height: 16px;
-  display: block;
-  pointer-events: none;
-}
-
-/* Hard clamp wrapper — prevents any SVG from exceeding 16px */
 .btn-icon-wrap {
   width: 16px;
   height: 16px;
@@ -133,15 +165,11 @@
 .btn-icon-wrap svg {
   width: 16px !important;
   height: 16px !important;
-  min-width: unset;
-  max-width: unset;
   display: block;
 }
 
 /* ── Mobile menu button — hidden on desktop ── */
-.mobile-menu-btn {
-  display: none;
-}
+.mobile-menu-btn { display: none; }
 
 /* ── Mobile dropdown ── */
 .mobile-dropdown {
@@ -151,7 +179,7 @@
   border-top: 1px solid transparent;
 }
 .mobile-dropdown.open {
-  max-height: 280px;
+  max-height: 360px;
   border-top-color: var(--border);
 }
 
@@ -160,27 +188,28 @@
   align-items: center;
   justify-content: space-between;
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 600;
   color: var(--text-secondary);
-  padding: 15px 24px;
+  padding: 14px 24px;
   border-bottom: 1px solid var(--border);
   transition: color 0.18s ease, background 0.18s ease;
   width: 100%;
 }
-.mobile-nav-item:last-child {
-  border-bottom: none;
-}
-.mobile-nav-item:hover {
-  color: var(--text-primary);
-  background: var(--bg-alt);
-}
-.mobile-nav-item.active {
-  color: var(--accent);
-  font-weight: 700;
-}
+.mobile-nav-item:hover { color: var(--text-primary); background: var(--bg-alt); }
+.mobile-nav-item.active { color: var(--accent); font-weight: 700; }
+.mobile-nav-item:last-child { border-bottom: none; }
 
-/* ── Mobile theme toggle button ── */
+/* CTA buttons in mobile dropdown */
+.mobile-nav-ctas {
+  display: flex;
+  gap: 8px;
+  padding: 14px 24px;
+  border-bottom: 1px solid var(--border);
+}
+.w-full { width: 100%; justify-content: center; }
+
+/* ── Mobile theme toggle ── */
 .mobile-theme-toggle {
   background: transparent;
   border: none;
@@ -189,22 +218,18 @@
   text-align: left;
 }
 .mobile-theme-toggle svg {
-  width: 17px;
-  height: 17px;
+  width: 16px;
+  height: 16px;
   color: var(--text-muted);
   flex-shrink: 0;
 }
 
 /* ── Responsive ── */
-@media (max-width: 650px) {
-  .nav-links,
-  .desktop-theme-btn {
-    display: none;
-  }
-  .mobile-menu-btn {
-    display: flex;
-  }
-  .navbar-inner {
-    gap: 0;
-  }
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .desktop-theme-btn { display: none; }
+  .nav-btn-ghost { display: none; }
+  .nav-btn-primary { display: none; }
+  .mobile-menu-btn { display: flex; }
+  .navbar-inner { gap: 0; }
 }

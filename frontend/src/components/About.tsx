@@ -37,7 +37,7 @@ const About = () => {
             </div>
             <h3 className="about-card-title">The Engine</h3>
             <p className="about-card-body">
-              Techfit’s AI engine reads between the lines of your resume,
+              Techfit’s engine reads between the lines of your resume,
               mapping your unique background to the tech roles you are
               statistically most likely to succeed in.
             </p>
