@@ -1,0 +1,2627 @@
+[
+  {
+    "title": "2D ARTIST/ANIMATOR",
+    "skills": [
+      "2D Animation",
+      "Drawing",
+      "Illustration",
+      "Animation Software"
+    ]
+  },
+  {
+    "title": "3D ARTIST/ANIMATOR",
+    "skills": [
+      "3D Animation",
+      "Modeling",
+      "Texturing",
+      "Rigging"
+    ]
+  },
+  {
+    "title": "ACCESSIBILITY SPECIALIST",
+    "skills": [
+      "Web Accessibility Guidelines",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "User Experience Design"
+    ]
+  },
+  {
+    "title": "ADMIN BIG DATA",
+    "skills": [
+      "Big Data Management",
+      "Hadoop",
+      "Spark",
+      "Data Warehousing",
+      "SQL"
+    ]
+  },
+  {
+    "title": "AGILE PROJECT MANAGER",
+    "skills": [
+      "Agile Methodologies",
+      "Scrum",
+      "Kanban",
+      "Project Management Tools",
+      "Leadership"
+    ]
+  },
+  {
+    "title": "AI RESEARCHER",
+    "skills": [
+      "AI/ML Algorithms",
+      "Python",
+      "Research Methodologies",
+      "Data Analysis"
+    ]
+  },
+  {
+    "title": "AI SOFTWARE ARCHITECT",
+    "skills": [
+      "AI/ML Architecture",
+      "Software Design",
+      "Cloud Computing",
+      "Data Modeling"
+    ]
+  },
+  {
+    "title": "ANDROID DEVELOPER",
+    "skills": [
+      "Java",
+      "Kotlin",
+      "Android SDK",
+      "Mobile App Development",
+      "UI/UX Design"
+    ]
+  },
+  {
+    "title": "ANIMATION DIRECTOR",
+    "skills": [
+      "Animation Direction",
+      "Storytelling",
+      "Team Leadership",
+      "Project Management"
+    ]
+  },
+  {
+    "title": "ANIMATOR",
+    "skills": [
+      "Animation Software",
+      "2D/3D Animation",
+      "Storyboarding",
+      "Visual Effects"
+    ]
+  },
+  {
+    "title": "ANSIBLE AUTOMATION ENGINEER",
+    "skills": [
+      "Ansible",
+      "Automation Scripts",
+      "Linux",
+      "Networking",
+      "Cloud Computing"
+    ]
+  },
+  {
+    "title": "API DEVELOPER",
+    "skills": [
+      "API Design",
+      "RESTful Services",
+      "Programming Languages",
+      "Security"
+    ]
+  },
+  {
+    "title": "APPLICATION DESIGNER",
+    "skills": [
+      "Application Design",
+      "UI/UX Principles",
+      "Programming Languages",
+      "Software Architecture"
+    ]
+  },
+  {
+    "title": "APPLICATION ENGINEER",
+    "skills": [
+      "Application Development",
+      "Programming Languages",
+      "Troubleshooting",
+      "System Administration"
+    ]
+  },
+  {
+    "title": "APPLICATION SECURITY ENGINEER",
+    "skills": [
+      "Security Protocols",
+      "Penetration Testing",
+      "Secure Coding Practices",
+      "Compliance"
+    ]
+  },
+  {
+    "title": "ART DIRECTOR",
+    "skills": [
+      "Art Direction",
+      "Visual Design",
+      "Team Leadership",
+      "Project Management"
+    ]
+  },
+  {
+    "title": "ARTIFACTORY ADMINISTRATOR",
+    "skills": [
+      "Artifactory",
+      "Repository Management",
+      "DevOps Tools",
+      "CI/CD Pipelines"
+    ]
+  },
+  {
+    "title": "ARTIFACTORY ENGINEER",
+    "skills": [
+      "Artifactory",
+      "DevOps Practices",
+      "Continuous Integration",
+      "Software Packaging"
+    ]
+  },
+  {
+    "title": "ARTIFICIAL INTELLIGENCE / MACHINE LEARNING LEADER",
+    "skills": [
+      "AI/ML Frameworks",
+      "Leadership",
+      "Strategic Planning",
+      "Data Science"
+    ]
+  },
+  {
+    "title": "ARTIFICIAL INTELLIGENCE / MACHINE LEARNING SR.LEADER",
+    "skills": [
+      "Advanced AI/ML",
+      "Leadership",
+      "Strategic Vision",
+      "Team Management"
+    ]
+  },
+  {
+    "title": "ARTIFICIAL INTELLIGENCE ARCHITECT",
+    "skills": [
+      "AI/ML Frameworks",
+      "System Architecture",
+      "Cloud Computing",
+      "Data Modeling"
+    ]
+  },
+  {
+    "title": "ARTIFICIAL INTELLIGENCE ENGINEER",
+    "skills": [
+      "AI/ML Algorithms",
+      "Python",
+      "Deep Learning",
+      "Neural Networks"
+    ]
+  },
+  {
+    "title": "ARTIFICIAL INTELLIGENCE RESEARCHER",
+    "skills": [
+      "Research Methodologies",
+      "AI/ML Algorithms",
+      "Python",
+      "Data Analysis"
+    ]
+  },
+  {
+    "title": "AUTOMATION SPECIALIST",
+    "skills": [
+      "Automation Tools",
+      "Scripting",
+      "Process Improvement",
+      "Testing"
+    ]
+  },
+  {
+    "title": "AWS DEVOPS ENGINEER",
+    "skills": [
+      "AWS Services",
+      "DevOps Practices",
+      "CI/CD Pipelines",
+      "Automation"
+    ]
+  },
+  {
+    "title": "AWS SOLUTIONS ARCHITECT",
+    "skills": [
+      "AWS Services",
+      "Cloud Architecture",
+      "Solution Design",
+      "Cost Optimization"
+    ]
+  },
+  {
+    "title": "AZURE DEVOPS ENGINEER",
+    "skills": [
+      "Azure Services",
+      "DevOps Practices",
+      "CI/CD Pipelines",
+      "Automation"
+    ]
+  },
+  {
+    "title": "BACK END DEVELOPER",
+    "skills": [
+      "Server-Side Programming",
+      "Databases",
+      "API Development",
+      "Frameworks"
+    ]
+  },
+  {
+    "title": "BAMBOO ENGINEER",
+    "skills": [
+      "Bamboo",
+      "CI/CD Pipelines",
+      "Build Automation",
+      "Software Configuration Management"
+    ]
+  },
+  {
+    "title": "BIG DATA ARCHITECT",
+    "skills": [
+      "Big Data Technologies",
+      "Hadoop",
+      "Spark",
+      "Data Warehousing",
+      "System Design"
+    ]
+  },
+  {
+    "title": "BIG DATA ENGINEER",
+    "skills": [
+      "Hadoop",
+      "Spark",
+      "ETL Processes",
+      "Data Processing",
+      "Database Management"
+    ]
+  },
+  {
+    "title": "BIG DATA SPECIALIST",
+    "skills": [
+      "Big Data Technologies",
+      "Data Analysis",
+      "SQL",
+      "Data Mining"
+    ]
+  },
+  {
+    "title": "BITBUCKET ENGINEER",
+    "skills": [
+      "Bitbucket",
+      "Git",
+      "Version Control",
+      "CI/CD Integration"
+    ]
+  },
+  {
+    "title": "BLOCKCHAIN DEVELOPER",
+    "skills": [
+      "Blockchain Technologies",
+      "Solidity",
+      "Cryptography",
+      "Smart Contracts"
+    ]
+  },
+  {
+    "title": "BUILD AND RELEASE ENGINEER",
+    "skills": [
+      "CI/CD Pipelines",
+      "Build Systems",
+      "Automation",
+      "Configuration Management"
+    ]
+  },
+  {
+    "title": "BUILD ENGINEER",
+    "skills": [
+      "Build Systems",
+      "Scripting",
+      "Automation",
+      "Software Configuration Management"
+    ]
+  },
+  {
+    "title": "BUSINESS INTELLIGENCE ANALYST",
+    "skills": [
+      "Data Analysis",
+      "SQL",
+      "Data Visualization",
+      "Business Acumen"
+    ]
+  },
+  {
+    "title": "BUSINESS INTELLIGENCE DEVELOPER",
+    "skills": [
+      "Business Intelligence Tools",
+      "Data Modeling",
+      "SQL",
+      "ETL Processes"
+    ]
+  },
+  {
+    "title": "BUSINESS SYSTEMS ANALYST",
+    "skills": [
+      "Requirements Gathering",
+      "Process Analysis",
+      "System Design",
+      "Documentation"
+    ]
+  },
+  {
+    "title": "C# DEVELOPER",
+    "skills": [
+      "C#",
+      ".NET Framework",
+      "ASP.NET",
+      "Software Development",
+      "Object-Oriented Programming"
+    ]
+  },
+  {
+    "title": "CHARACTER DESIGNER",
+    "skills": [
+      "Character Design",
+      "Illustration",
+      "Drawing",
+      "Animation"
+    ]
+  },
+  {
+    "title": "CHEF INSPEC ENGINEER",
+    "skills": [
+      "Chef Inspec",
+      "Compliance Automation",
+      "Infrastructure Testing",
+      "Ruby"
+    ]
+  },
+  {
+    "title": "CHEF OPERATIONS ENGINEER",
+    "skills": [
+      "Chef",
+      "Automation",
+      "Infrastructure Management",
+      "Ruby"
+    ]
+  },
+  {
+    "title": "CHIEF INFORMATION OFFICER",
+    "skills": [
+      "IT Strategy",
+      "Leadership",
+      "Budgeting",
+      "Project Management"
+    ]
+  },
+  {
+    "title": "CHIEF INFORMATION OFFICER (CIO)",
+    "skills": [
+      "IT Strategy",
+      "Leadership",
+      "Budgeting",
+      "Project Management"
+    ]
+  },
+  {
+    "title": "CHIEF TECHNOLOGY OFFICER (CTO)",
+    "skills": [
+      "Technology Strategy",
+      "Innovation",
+      "Research and Development",
+      "Team Leadership"
+    ]
+  },
+  {
+    "title": "CLOUD ADMINISTRATOR",
+    "skills": [
+      "Cloud Platforms",
+      "System Administration",
+      "Virtualization",
+      "Networking"
+    ]
+  },
+  {
+    "title": "CLOUD ARCHITECT",
+    "skills": [
+      "Cloud Platforms",
+      "System Architecture",
+      "Cloud Security",
+      "DevOps"
+    ]
+  },
+  {
+    "title": "CLOUD AUTOMATION ENGINEER",
+    "skills": [
+      "Cloud Automation Tools",
+      "Scripting",
+      "Configuration Management",
+      "DevOps"
+    ]
+  },
+  {
+    "title": "CLOUD COMPUTING SPECIALIST",
+    "skills": [
+      "Cloud Platforms",
+      "Virtualization",
+      "System Administration",
+      "Security"
+    ]
+  },
+  {
+    "title": "CLOUD MIGRATION SPECIALIST",
+    "skills": [
+      "Cloud Platforms",
+      "Migration Tools",
+      "System Migration",
+      "Project Management"
+    ]
+  },
+  {
+    "title": "CLOUD NETWORK ENGINEER",
+    "skills": [
+      "Cloud Networking",
+      "Virtual Networks",
+      "Network Security",
+      "Cloud Platforms"
+    ]
+  },
+  {
+    "title": "CLOUD SECURITY ENGINEER",
+    "skills": [
+      "Cloud Security",
+      "Security Protocols",
+      "Compliance",
+      "Cloud Platforms"
+    ]
+  },
+  {
+    "title": "CLOUD SYSTEM ADMINISTRATOR",
+    "skills": [
+      "Cloud Platforms",
+      "System Administration",
+      "Virtualization",
+      "Networking"
+    ]
+  },
+  {
+    "title": "CLOUD SYSTEM ENGINEER",
+    "skills": [
+      "Cloud Platforms",
+      "System Engineering",
+      "Automation",
+      "Scripting"
+    ]
+  },
+  {
+    "title": "CLOUD/SOFTWARE APPLICATIONS ENGINEER",
+    "skills": [
+      "Cloud Platforms",
+      "Application Development",
+      "Cloud Services",
+      "DevOps"
+    ]
+  },
+  {
+    "title": "CLOUD/SOFTWARE ARCHITECT",
+    "skills": [
+      "Cloud Platforms",
+      "System Architecture",
+      "Cloud Security",
+      "DevOps"
+    ]
+  },
+  {
+    "title": "CLOUD/SOFTWARE DEVELOPER",
+    "skills": [
+      "Cloud Platforms",
+      "Programming Languages",
+      "Software Development",
+      "Cloud Services"
+    ]
+  },
+  {
+    "title": "CNC PROGRAMMER",
+    "skills": [
+      "CNC Machines",
+      "CAD/CAM Software",
+      "G-Code",
+      "Manufacturing Processes"
+    ]
+  },
+  {
+    "title": "CODER",
+    "skills": [
+      "Programming Languages",
+      "Scripting",
+      "Problem Solving",
+      "Software Development"
+    ]
+  },
+  {
+    "title": "COMPOSITOR",
+    "skills": [
+      "Compositing",
+      "Visual Effects",
+      "Color Correction",
+      "Image Manipulation"
+    ]
+  },
+  {
+    "title": "COMPUTER AND INFORMATION RESEARCH MANAGER",
+    "skills": [
+      "Research Management",
+      "Team Leadership",
+      "Budgeting",
+      "Project Management"
+    ]
+  },
+  {
+    "title": "COMPUTER AND INFORMATION RESEARCH SCIENTIST",
+    "skills": [
+      "Research Methodologies",
+      "Data Analysis",
+      "Programming",
+      "Scientific Writing"
+    ]
+  },
+  {
+    "title": "COMPUTER FORENSIC ANALYST",
+    "skills": [
+      "Digital Forensics",
+      "Incident Response",
+      "Data Recovery",
+      "Legal Compliance"
+    ]
+  },
+  {
+    "title": "COMPUTER GRAPHICS ANIMATOR",
+    "skills": [
+      "Animation Software",
+      "3D Modeling",
+      "Visual Effects",
+      "Graphic Design"
+    ]
+  },
+  {
+    "title": "COMPUTER HARDWARE ENGINEER",
+    "skills": [
+      "Hardware Design",
+      "Circuit Design",
+      "Embedded Systems",
+      "Testing"
+    ]
+  },
+  {
+    "title": "COMPUTER NETWORK ARCHITECT",
+    "skills": [
+      "Network Design",
+      "Network Protocols",
+      "Security",
+      "System Architecture"
+    ]
+  },
+  {
+    "title": "COMPUTER NETWORK SPECIALIST",
+    "skills": [
+      "Networking",
+      "Troubleshooting",
+      "System Administration",
+      "Security"
+    ]
+  },
+  {
+    "title": "COMPUTER PROGRAMMER",
+    "skills": [
+      "Programming Languages",
+      "Algorithms",
+      "Software Development",
+      "Debugging"
+    ]
+  },
+  {
+    "title": "COMPUTER RESEARCH SCIENTIST",
+    "skills": [
+      "Research Methodologies",
+      "Data Analysis",
+      "Programming",
+      "Scientific Writing"
+    ]
+  },
+  {
+    "title": "COMPUTER SUPPORT SPECIALIST",
+    "skills": [
+      "Technical Support",
+      "Troubleshooting",
+      "Customer Service",
+      "Hardware/Software"
+    ]
+  },
+  {
+    "title": "COMPUTER SYSTEMS ANALYST",
+    "skills": [
+      "Systems Analysis",
+      "Requirements Gathering",
+      "Process Improvement",
+      "IT Consulting"
+    ]
+  },
+  {
+    "title": "CONFLUENCE ENGINEER",
+    "skills": [
+      "Confluence",
+      "Atlassian Suite",
+      "Documentation",
+      "Collaboration Tools"
+    ]
+  },
+  {
+    "title": "CONSUL ENGINEER",
+    "skills": [
+      "Consul",
+      "Service Discovery",
+      "Infrastructure Automation",
+      "Networking"
+    ]
+  },
+  {
+    "title": "COVERAGE.PY ENGINEER",
+    "skills": [
+      "Coverage.py",
+      "Python Testing",
+      "Test Coverage Analysis",
+      "Software Quality"
+    ]
+  },
+  {
+    "title": "CUSTOMER SERVICE REPRESENTATIVE",
+    "skills": [
+      "Customer Service",
+      "Communication",
+      "Problem Solving",
+      "Technical Support"
+    ]
+  },
+  {
+    "title": "CYBERSECURITY ANALYST",
+    "skills": [
+      "Security Protocols",
+      "Threat Analysis",
+      "Compliance",
+      "Incident Response"
+    ]
+  },
+  {
+    "title": "CYBERSECURITY ENGINEER",
+    "skills": [
+      "Security Protocols",
+      "Threat Analysis",
+      "Risk Management",
+      "Incident Response"
+    ]
+  },
+  {
+    "title": "CYBERSECURITY SPECIALIST",
+    "skills": [
+      "Security Protocols",
+      "Threat Analysis",
+      "Compliance",
+      "Incident Response"
+    ]
+  },
+  {
+    "title": "DATA ANALYST",
+    "skills": [
+      "Data Analysis",
+      "SQL",
+      "Data Visualization",
+      "Statistical Analysis"
+    ]
+  },
+  {
+    "title": "DATA ARCHITECT",
+    "skills": [
+      "Data Modeling",
+      "Database Design",
+      "ETL Processes",
+      "Data Warehousing"
+    ]
+  },
+  {
+    "title": "DATA ENGINEER",
+    "skills": [
+      "ETL Processes",
+      "Data Warehousing",
+      "Big Data Technologies",
+      "Database Management"
+    ]
+  },
+  {
+    "title": "DATA MODELER",
+    "skills": [
+      "Data Modeling Techniques",
+      "Database Design",
+      "Data Governance",
+      "Data Analysis"
+    ]
+  },
+  {
+    "title": "DATA QUALITY ENGINEER",
+    "skills": [
+      "Data Quality Tools",
+      "Data Profiling",
+      "SQL",
+      "Data Governance"
+    ]
+  },
+  {
+    "title": "DATA SCIENCE SPECIALIST",
+    "skills": [
+      "Data Analysis",
+      "Machine Learning",
+      "Statistical Modeling",
+      "Data Visualization"
+    ]
+  },
+  {
+    "title": "DATA SCIENTIST",
+    "skills": [
+      "Machine Learning",
+      "Statistical Analysis",
+      "Data Mining",
+      "Programming"
+    ]
+  },
+  {
+    "title": "DATA WAREHOUSE MANAGER",
+    "skills": [
+      "Data Warehousing",
+      "ETL Processes",
+      "Data Modeling",
+      "Team Leadership"
+    ]
+  },
+  {
+    "title": "DATA WAREHOUSE PROGRAMMING SPECIALIST",
+    "skills": [
+      "ETL Processes",
+      "SQL",
+      "Data Modeling",
+      "Data Warehousing"
+    ]
+  },
+  {
+    "title": "DATABASE ADMINISTRATOR",
+    "skills": [
+      "Database Management",
+      "SQL",
+      "Performance Tuning",
+      "Backup and Recovery"
+    ]
+  },
+  {
+    "title": "DATABASE ANALYST",
+    "skills": [
+      "Data Analysis",
+      "SQL",
+      "Data Modeling",
+      "Reporting"
+    ]
+  },
+  {
+    "title": "DATABASE ARCHITECT",
+    "skills": [
+      "Database Design",
+      "Data Modeling",
+      "SQL",
+      "Performance Tuning"
+    ]
+  },
+  {
+    "title": "DATABASE DEVELOPER",
+    "skills": [
+      "Database Development",
+      "SQL",
+      "PL/SQL",
+      "Data Modeling"
+    ]
+  },
+  {
+    "title": "DATADOG ENGINEER",
+    "skills": [
+      "Datadog",
+      "Monitoring",
+      "System Performance",
+      "Cloud Infrastructure"
+    ]
+  },
+  {
+    "title": "DEVOPS ARCHITECT",
+    "skills": [
+      "DevOps Practices",
+      "Cloud Computing",
+      "Automation",
+      "System Architecture"
+    ]
+  },
+  {
+    "title": "DEVOPS ENGINEER",
+    "skills": [
+      "Automation",
+      "CI/CD",
+      "Cloud Computing",
+      "Scripting"
+    ]
+  },
+  {
+    "title": "DEVOPS MANAGER",
+    "skills": [
+      "DevOps Practices",
+      "Team Leadership",
+      "Project Management",
+      "Automation"
+    ]
+  },
+  {
+    "title": "DEVSECOPS ARCHITECT",
+    "skills": [
+      "DevSecOps Practices",
+      "Security Automation",
+      "Cloud Security",
+      "System Architecture"
+    ]
+  },
+  {
+    "title": "DEVSECOPS ENGINEER",
+    "skills": [
+      "Security Automation",
+      "CI/CD",
+      "Cloud Security",
+      "Scripting"
+    ]
+  },
+  {
+    "title": "DIGITAL PROGRAM MANAGER",
+    "skills": [
+      "Digital Strategy",
+      "Program Management",
+      "Team Leadership",
+      "Communication"
+    ]
+  },
+  {
+    "title": "DIGITAL TRANSFORMATION CONSULTANT",
+    "skills": [
+      "Digital Strategy",
+      "Technology Consulting",
+      "Business Process Improvement",
+      "Change Management"
+    ]
+  },
+  {
+    "title": "DIRECTOR BUSINESS SYSTEMS",
+    "skills": [
+      "Business Systems",
+      "Team Leadership",
+      "Project Management",
+      "Process Improvement"
+    ]
+  },
+  {
+    "title": "DIRECTOR HARDWARE",
+    "skills": [
+      "Hardware Management",
+      "Team Leadership",
+      "Budgeting",
+      "Strategic Planning"
+    ]
+  },
+  {
+    "title": "DIRECTOR OF ENGINEERING",
+    "skills": [
+      "Leadership",
+      "Software Development",
+      "Project Management",
+      "Team Management"
+    ]
+  },
+  {
+    "title": "DIRECTOR OF SECURITY",
+    "skills": [
+      "Security Leadership",
+      "Risk Management",
+      "Compliance",
+      "Incident Response"
+    ]
+  },
+  {
+    "title": "DIRECTOR ORACLE",
+    "skills": [
+      "Oracle Database",
+      "Team Leadership",
+      "Project Management",
+      "Budgeting"
+    ]
+  },
+  {
+    "title": "DOCKER ENGINEER",
+    "skills": [
+      "Docker",
+      "Containerization",
+      "Orchestration",
+      "DevOps"
+    ]
+  },
+  {
+    "title": "E-COMMERCE DEVELOPER",
+    "skills": [
+      "E-Commerce Platforms",
+      "Web Development",
+      "Payment Gateways",
+      "Security"
+    ]
+  },
+  {
+    "title": "EFFECTS TECHNICAL DIRECTOR (FX TD)",
+    "skills": [
+      "Visual Effects",
+      "Technical Expertise",
+      "Scripting",
+      "Problem Solving"
+    ]
+  },
+  {
+    "title": "ELK ENGINEER",
+    "skills": [
+      "ELK Stack",
+      "Log Management",
+      "Data Analysis",
+      "System Monitoring"
+    ]
+  },
+  {
+    "title": "EMBEDDED SOFTWARE ENGINEER",
+    "skills": [
+      "Embedded Systems",
+      "C/C++",
+      "Firmware Development",
+      "Hardware Interfaces"
+    ]
+  },
+  {
+    "title": "EMBEDDED SYSTEMS ENGINEER",
+    "skills": [
+      "Embedded Systems",
+      "C/C++",
+      "Firmware Development",
+      "Hardware Interfaces"
+    ]
+  },
+  {
+    "title": "ENTRY LEVEL DEVELOPER",
+    "skills": [
+      "Programming Basics",
+      "Software Development",
+      "Problem Solving",
+      "Learning Agility"
+    ]
+  },
+  {
+    "title": "ENTRY LEVEL NETWORK ENGINEER",
+    "skills": [
+      "Networking Basics",
+      "Troubleshooting",
+      "System Administration",
+      "Learning Agility"
+    ]
+  },
+  {
+    "title": "ENTRY LEVEL PROGRAMMER",
+    "skills": [
+      "Programming Basics",
+      "Software Development",
+      "Problem Solving",
+      "Learning Agility"
+    ]
+  },
+  {
+    "title": "ENTRY LEVEL WEB DEVELOPER",
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Basic Web Development",
+      "Learning Agility"
+    ]
+  },
+  {
+    "title": "ENVOY ENGINEER",
+    "skills": [
+      "Envoy Proxy",
+      "Service Mesh",
+      "Load Balancing",
+      "Networking"
+    ]
+  },
+  {
+    "title": "ERP CONSULTANT",
+    "skills": [
+      "ERP Systems",
+      "Business Process Analysis",
+      "Implementation",
+      "Training"
+    ]
+  },
+  {
+    "title": "FALCO ENGINEER",
+    "skills": [
+      "Falco",
+      "Kubernetes Security",
+      "Cloud Security",
+      "System Monitoring"
+    ]
+  },
+  {
+    "title": "FIRMWARE MANAGER",
+    "skills": [
+      "Firmware Development",
+      "Team Leadership",
+      "Project Management",
+      "Embedded Systems"
+    ]
+  },
+  {
+    "title": "FLUENTD ENGINEER",
+    "skills": [
+      "Fluentd",
+      "Log Aggregation",
+      "Data Collection",
+      "System Monitoring"
+    ]
+  },
+  {
+    "title": "FORENSIC ANIMATOR",
+    "skills": [
+      "Forensic Animation",
+      "3D Modeling",
+      "Legal Expertise",
+      "Visual Communication"
+    ]
+  },
+  {
+    "title": "FORTIFY ENGINEER",
+    "skills": [
+      "Fortify",
+      "Static Code Analysis",
+      "Application Security",
+      "Secure Coding"
+    ]
+  },
+  {
+    "title": "FRAMEWORKS SPECIALIST",
+    "skills": [
+      "Software Frameworks",
+      "Programming Languages",
+      "Problem Solving",
+      "System Design"
+    ]
+  },
+  {
+    "title": "FRONT END DEVELOPER",
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "UI/UX Design",
+      "Responsive Design"
+    ]
+  },
+  {
+    "title": "FRONT-END DESIGNER",
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "UI/UX Design",
+      "Responsive Design"
+    ]
+  },
+  {
+    "title": "FULL STACK DEVELOPER",
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Back-End Technologies",
+      "Database Management"
+    ]
+  },
+  {
+    "title": "FULL STACK JAVA DEVELOPER/PROGRAMMER/ENGINEER",
+    "skills": [
+      "Java",
+      "Spring",
+      "Hibernate",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ]
+  },
+  {
+    "title": "FULL STACK PYTHON DEVELOPER/PROGRAMMER/ENGINEER",
+    "skills": [
+      "Python",
+      "Django",
+      "Flask",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ]
+  },
+  {
+    "title": "GAME DEVELOPER",
+    "skills": [
+      "C++",
+      "C#",
+      "Game Engines",
+      "3D Modeling",
+      "Game Design"
+    ]
+  },
+  {
+    "title": "GCP DEVOPS ENGINEER",
+    "skills": [
+      "Google Cloud Platform",
+      "DevOps Practices",
+      "CI/CD Pipelines",
+      "Automation"
+    ]
+  },
+  {
+    "title": "GEOGRAPHIC INFORMATION SYSTEMS (GIS) ANALYST",
+    "skills": [
+      "GIS Software",
+      "Spatial Analysis",
+      "Cartography",
+      "Data Visualization"
+    ]
+  },
+  {
+    "title": "GERRIT ADMINISTRATOR",
+    "skills": [
+      "Gerrit",
+      "Code Review",
+      "Git",
+      "Version Control"
+    ]
+  },
+  {
+    "title": "GIT ENGINEER",
+    "skills": [
+      "Git",
+      "Version Control",
+      "Branching Strategies",
+      "Collaboration"
+    ]
+  },
+  {
+    "title": "GITHUB ENGINEER",
+    "skills": [
+      "GitHub",
+      "Git",
+      "Collaboration Tools",
+      "CI/CD Integration"
+    ]
+  },
+  {
+    "title": "GITLAB ENGINEER",
+    "skills": [
+      "GitLab",
+      "Git",
+      "CI/CD Pipelines",
+      "DevOps Practices"
+    ]
+  },
+  {
+    "title": "GRADLE ENGINEER",
+    "skills": [
+      "Gradle",
+      "Build Automation",
+      "Java",
+      "Software Configuration Management"
+    ]
+  },
+  {
+    "title": "GRAFANA ENGINEER",
+    "skills": [
+      "Grafana",
+      "Data Visualization",
+      "Monitoring",
+      "System Performance"
+    ]
+  },
+  {
+    "title": "GRAPHIC EFFECTS SUPERVISOR",
+    "skills": [
+      "Visual Effects Supervision",
+      "Team Leadership",
+      "Technical Expertise",
+      "Project Management"
+    ]
+  },
+  {
+    "title": "GROOVY ENGINEER",
+    "skills": [
+      "Groovy",
+      "Scripting",
+      "Automation",
+      "Software Development"
+    ]
+  },
+  {
+    "title": "HELP DESK TECHNICIAN",
+    "skills": [
+      "Technical Support",
+      "Troubleshooting",
+      "Customer Service",
+      "Hardware/Software"
+    ]
+  },
+  {
+    "title": "IDENTITY AND ACCESS MANAGEMENT SPECIALIST",
+    "skills": [
+      "IAM Systems",
+      "Security Protocols",
+      "Authentication",
+      "Authorization"
+    ]
+  },
+  {
+    "title": "IMPLEMENTATION DIRECTOR",
+    "skills": [
+      "Implementation Management",
+      "Project Management",
+      "Team Leadership",
+      "Communication"
+    ]
+  },
+  {
+    "title": "INFORMATION ARCHITECT",
+    "skills": [
+      "Information Architecture",
+      "User Experience Design",
+      "Content Strategy",
+      "Taxonomy"
+    ]
+  },
+  {
+    "title": "INFORMATION MANAGEMENT SYSTEMS DIRECTOR",
+    "skills": [
+      "Information Management",
+      "Systems Administration",
+      "Data Management",
+      "Compliance"
+    ]
+  },
+  {
+    "title": "INFORMATION SECURITY ANALYST",
+    "skills": [
+      "Security Protocols",
+      "Threat Analysis",
+      "Compliance",
+      "Incident Response"
+    ]
+  },
+  {
+    "title": "INFORMATION TECHNOLOGY ANALYST",
+    "skills": [
+      "IT Analysis",
+      "Requirements Gathering",
+      "Process Improvement",
+      "IT Consulting"
+    ]
+  },
+  {
+    "title": "INFOSEC ANALYST/CYBERSECURITY ANALYST",
+    "skills": [
+      "Security Protocols",
+      "Threat Analysis",
+      "Compliance",
+      "Incident Response"
+    ]
+  },
+  {
+    "title": "INFRASTRUCTURE ARCHITECT",
+    "skills": [
+      "System Architecture",
+      "Cloud Computing",
+      "Networking",
+      "Security"
+    ]
+  },
+  {
+    "title": "INTEGRATION DIRECTOR",
+    "skills": [
+      "Integration Management",
+      "Project Management",
+      "Team Leadership",
+      "Communication"
+    ]
+  },
+  {
+    "title": "INTELLIGENCE SPECIALIST",
+    "skills": [
+      "Data Analysis",
+      "Intelligence Gathering",
+      "Reporting",
+      "Security"
+    ]
+  },
+  {
+    "title": "INTERACTION DESIGNER",
+    "skills": [
+      "Interaction Design",
+      "User Research",
+      "Prototyping",
+      "Usability Testing"
+    ]
+  },
+  {
+    "title": "INTERNET ENGINEER",
+    "skills": [
+      "Networking Protocols",
+      "Internet Technologies",
+      "System Administration",
+      "Security"
+    ]
+  },
+  {
+    "title": "INTERNET OF THINGS (IoT) DEVELOPER",
+    "skills": [
+      "IoT Platforms",
+      "Embedded Systems",
+      "Sensor Technology",
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "IOS DEVELOPER",
+    "skills": [
+      "Swift",
+      "Objective-C",
+      "iOS SDK",
+      "Mobile App Development",
+      "UI/UX Design"
+    ]
+  },
+  {
+    "title": "ISTIO ENGINEER",
+    "skills": [
+      "Istio",
+      "Service Mesh",
+      "Traffic Management",
+      "Security"
+    ]
+  },
+  {
+    "title": "IT APPRENTICE",
+    "skills": [
+      "Technical Support",
+      "Troubleshooting",
+      "Learning Agility",
+      "Customer Service"
+    ]
+  },
+  {
+    "title": "IT AUDITOR",
+    "skills": [
+      "IT Auditing",
+      "Compliance",
+      "Risk Management",
+      "Security"
+    ]
+  },
+  {
+    "title": "IT DIRECTOR",
+    "skills": [
+      "IT Management",
+      "Team Leadership",
+      "Budgeting",
+      "Project Management"
+    ]
+  },
+  {
+    "title": "IT ENGINEER",
+    "skills": [
+      "System Engineering",
+      "Networking",
+      "Cloud Computing",
+      "Security"
+    ]
+  },
+  {
+    "title": "IT MANAGER",
+    "skills": [
+      "IT Management",
+      "Team Leadership",
+      "Project Management",
+      "Budgeting"
+    ]
+  },
+  {
+    "title": "IT PROGRAM ENGAGEMENT DIRECTOR",
+    "skills": [
+      "IT Program Management",
+      "Customer Relationship Management",
+      "Stakeholder Management",
+      "Team Leadership"
+    ]
+  },
+  {
+    "title": "IT SALES DIRECTOR",
+    "skills": [
+      "Sales Leadership",
+      "Sales Strategy",
+      "Customer Relationship Management",
+      "Team Management"
+    ]
+  },
+  {
+    "title": "IT SALES EXECUTIVE",
+    "skills": [
+      "Sales",
+      "Technology Solutions",
+      "Customer Relationship Management",
+      "Sales Strategy"
+    ]
+  },
+  {
+    "title": "IT SECURITY SPECIALIST",
+    "skills": [
+      "Security Protocols",
+      "Threat Analysis",
+      "Compliance",
+      "Risk Management"
+    ]
+  },
+  {
+    "title": "IT SUPPORT SPECIALIST",
+    "skills": [
+      "Technical Support",
+      "Troubleshooting",
+      "Customer Service",
+      "Hardware/Software"
+    ]
+  },
+  {
+    "title": "IT SYSTEMS ADMINISTRATOR",
+    "skills": [
+      "System Administration",
+      "Linux/Windows Servers",
+      "Troubleshooting",
+      "Scripting"
+    ]
+  },
+  {
+    "title": "IT TECHNICIAN",
+    "skills": [
+      "Technical Support",
+      "Troubleshooting",
+      "Hardware/Software",
+      "Networking"
+    ]
+  },
+  {
+    "title": "ITERATION MANAGER",
+    "skills": [
+      "Agile Methodologies",
+      "Scrum",
+      "Kanban",
+      "Team Facilitation"
+    ]
+  },
+  {
+    "title": "JACOCO ENGINEER",
+    "skills": [
+      "JaCoCo",
+      "Code Coverage",
+      "Java Testing",
+      "Software Quality"
+    ]
+  },
+  {
+    "title": "JAVA ARCHITECT",
+    "skills": [
+      "Java",
+      "System Architecture",
+      "Design Patterns",
+      "Cloud Computing"
+    ]
+  },
+  {
+    "title": "JAVA DEVELOPER",
+    "skills": [
+      "Java",
+      "Spring",
+      "Hibernate",
+      "Software Development",
+      "Object-Oriented Programming"
+    ]
+  },
+  {
+    "title": "JENKINS ENGINEER",
+    "skills": [
+      "Jenkins",
+      "CI/CD Pipelines",
+      "Build Automation",
+      "DevOps Practices"
+    ]
+  },
+  {
+    "title": "JIRA ADMINISTRATOR",
+    "skills": [
+      "Jira",
+      "Atlassian Suite",
+      "Workflow Configuration",
+      "Project Management"
+    ]
+  },
+  {
+    "title": "JUNIOR FRONT END DEVELOPER",
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Basic Web Development",
+      "Learning Agility"
+    ]
+  },
+  {
+    "title": "JUNIOR IOS DEVELOPER",
+    "skills": [
+      "Swift",
+      "Objective-C",
+      "iOS SDK",
+      "Basic Mobile App Development",
+      "Learning Agility"
+    ]
+  },
+  {
+    "title": "JUNIT ENGINEER",
+    "skills": [
+      "JUnit",
+      "Java Testing",
+      "Test Automation",
+      "Software Quality"
+    ]
+  },
+  {
+    "title": "KNOWLEDGE MANAGER",
+    "skills": [
+      "Knowledge Management",
+      "Information Architecture",
+      "Collaboration",
+      "Documentation"
+    ]
+  },
+  {
+    "title": "KUBERNETES OPERATIONS ENGINEER",
+    "skills": [
+      "Kubernetes",
+      "Container Orchestration",
+      "Cloud Computing",
+      "DevOps Practices"
+    ]
+  },
+  {
+    "title": "LAYOUT ARTIST",
+    "skills": [
+      "Layout",
+      "Cinematography",
+      "3D Modeling",
+      "Visual Storytelling"
+    ]
+  },
+  {
+    "title": "LEAD PROGRAMMER",
+    "skills": [
+      "Programming Languages",
+      "Software Development",
+      "Team Leadership",
+      "Mentoring"
+    ]
+  },
+  {
+    "title": "LINUX ADMINISTRATOR",
+    "skills": [
+      "Linux Servers",
+      "System Administration",
+      "Scripting",
+      "Troubleshooting"
+    ]
+  },
+  {
+    "title": "MACHINE LEARNING ARCHITECT",
+    "skills": [
+      "Machine Learning Algorithms",
+      "System Architecture",
+      "Cloud Computing",
+      "Data Modeling"
+    ]
+  },
+  {
+    "title": "MACHINE LEARNING ENGINEER",
+    "skills": [
+      "Machine Learning Algorithms",
+      "Python",
+      "Data Analysis",
+      "Model Deployment"
+    ]
+  },
+  {
+    "title": "MACHINE LEARNING ENGINEER FOR CYBERSECURITY",
+    "skills": [
+      "Machine Learning Algorithms",
+      "Cybersecurity",
+      "Data Analysis",
+      "Threat Detection"
+    ]
+  },
+  {
+    "title": "MAINFRAME DEVELOPER",
+    "skills": [
+      "Mainframe Systems",
+      "COBOL",
+      "JCL",
+      "VSAM"
+    ]
+  },
+  {
+    "title": "MANAGER HARDWARE",
+    "skills": [
+      "Hardware Management",
+      "Team Leadership",
+      "Budgeting",
+      "Inventory Management"
+    ]
+  },
+  {
+    "title": "MANAGER LINUX",
+    "skills": [
+      "Linux Administration",
+      "Team Leadership",
+      "Project Management",
+      "Troubleshooting"
+    ]
+  },
+  {
+    "title": "MANAGER NET",
+    "skills": [
+      "NET Development",
+      "Team Leadership",
+      "Project Management",
+      ".NET Framework"
+    ]
+  },
+  {
+    "title": "MANAGER PHP",
+    "skills": [
+      "PHP Development",
+      "Team Leadership",
+      "Project Management",
+      "Web Development"
+    ]
+  },
+  {
+    "title": "MANAGER UNIX",
+    "skills": [
+      "UNIX Administration",
+      "Team Leadership",
+      "Project Management",
+      "Troubleshooting"
+    ]
+  },
+  {
+    "title": "MAVEN ENGINEER",
+    "skills": [
+      "Maven",
+      "Build Automation",
+      "Java",
+      "Software Configuration Management"
+    ]
+  },
+  {
+    "title": "MICROSOFT DYNAMICS DEVELOPER",
+    "skills": [
+      "Microsoft Dynamics",
+      "CRM",
+      ".NET",
+      "Development"
+    ]
+  },
+  {
+    "title": "MOBILE APP DEVELOPER",
+    "skills": [
+      "Mobile App Development",
+      "iOS/Android SDKs",
+      "UI/UX Design",
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "MOBILE DEVELOPER",
+    "skills": [
+      "Mobile App Development",
+      "iOS/Android SDKs",
+      "UI/UX Design",
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "MOBILE SECURITY SPECIALIST",
+    "skills": [
+      "Mobile Security",
+      "Penetration Testing",
+      "Security Protocols",
+      "Risk Management"
+    ]
+  },
+  {
+    "title": "MOTION GRAPHICS ARTIST",
+    "skills": [
+      "Motion Graphics",
+      "Animation Software",
+      "Visual Effects",
+      "Graphic Design"
+    ]
+  },
+  {
+    "title": "MULESOFT DEVELOPER",
+    "skills": [
+      "MuleSoft Anypoint Platform",
+      "API Integration",
+      "Java",
+      "Integration Patterns"
+    ]
+  },
+  {
+    "title": "MULTIMEDIA ARCHITECT",
+    "skills": [
+      "Multimedia Design",
+      "Video Production",
+      "Audio Production",
+      "Graphic Design"
+    ]
+  },
+  {
+    "title": "NAGIOS ENGINEER",
+    "skills": [
+      "Nagios",
+      "System Monitoring",
+      "Linux",
+      "Networking"
+    ]
+  },
+  {
+    "title": "NATURAL LANGUAGE PROCESSING ENGINEER",
+    "skills": [
+      "NLP Algorithms",
+      "Python",
+      "Machine Learning",
+      "Text Analysis"
+    ]
+  },
+  {
+    "title": "NETWORK ANALYST",
+    "skills": [
+      "Network Monitoring",
+      "Troubleshooting",
+      "Performance Analysis",
+      "Reporting"
+    ]
+  },
+  {
+    "title": "NETWORK AND SYSTEMS ADMINISTRATOR",
+    "skills": [
+      "Networking",
+      "System Administration",
+      "Linux/Windows Servers",
+      "Troubleshooting"
+    ]
+  },
+  {
+    "title": "NETWORK ARCHITECT",
+    "skills": [
+      "Network Design",
+      "Network Protocols",
+      "Security",
+      "System Architecture"
+    ]
+  },
+  {
+    "title": "NETWORK ENGINEER",
+    "skills": [
+      "Networking Protocols",
+      "Cisco/Juniper Devices",
+      "Network Security",
+      "Troubleshooting"
+    ]
+  },
+  {
+    "title": "NETWORK INFRASTRUCTURE SPECIALIST",
+    "skills": [
+      "Networking Hardware",
+      "Cabling",
+      "Network Design",
+      "Implementation"
+    ]
+  },
+  {
+    "title": "NETWORK OPERATIONS ENGINEER",
+    "skills": [
+      "Network Operations",
+      "Troubleshooting",
+      "Monitoring",
+      "Incident Response"
+    ]
+  },
+  {
+    "title": "NETWORK RELIABILITY ENGINEER",
+    "skills": [
+      "Network Reliability",
+      "Automation",
+      "Monitoring",
+      "Incident Response"
+    ]
+  },
+  {
+    "title": "NETWORK SECURITY ENGINEER",
+    "skills": [
+      "Networking Protocols",
+      "Security Protocols",
+      "Firewall Management",
+      "Intrusion Detection"
+    ]
+  },
+  {
+    "title": "NEW RELIC ENGINEER",
+    "skills": [
+      "New Relic",
+      "Application Performance Monitoring",
+      "Troubleshooting",
+      "Cloud Computing"
+    ]
+  },
+  {
+    "title": "NEXUS ENGINEER",
+    "skills": [
+      "Nexus Repository Manager",
+      "Artifact Management",
+      "DevOps Practices"
+    ]
+  },
+  {
+    "title": "NOMAD ENGINEER",
+    "skills": [
+      "Nomad",
+      "Container Orchestration",
+      "HashiCorp Tools",
+      "Infrastructure Automation"
+    ]
+  },
+  {
+    "title": "NOTARY ENGINEER",
+    "skills": [
+      "Notary",
+      "Container Security",
+      "Docker",
+      "Cryptography"
+    ]
+  },
+  {
+    "title": "OCTOPUS DEPLOY ENGINEER",
+    "skills": [
+      "Octopus Deploy",
+      "Deployment Automation",
+      ".NET",
+      "PowerShell"
+    ]
+  },
+  {
+    "title": "OPENSHIFT ENGINEER",
+    "skills": [
+      "OpenShift",
+      "Kubernetes",
+      "Containerization",
+      "DevOps Practices"
+    ]
+  },
+  {
+    "title": "OPENSTACK ENGINEER",
+    "skills": [
+      "OpenStack",
+      "Cloud Computing",
+      "Virtualization",
+      "System Administration"
+    ]
+  },
+  {
+    "title": "OPERATIONS ENGINEER",
+    "skills": [
+      "System Administration",
+      "Linux/Windows Servers",
+      "Troubleshooting",
+      "Scripting"
+    ]
+  },
+  {
+    "title": "ORACLE DEVELOPER",
+    "skills": [
+      "Oracle Database",
+      "SQL",
+      "PL/SQL",
+      "Database Development"
+    ]
+  },
+  {
+    "title": "ORACLE SQL DEVELOPER",
+    "skills": [
+      "Oracle SQL",
+      "PL/SQL",
+      "Data Modeling",
+      "Database Design"
+    ]
+  },
+  {
+    "title": "PACKER ENGINEER",
+    "skills": [
+      "Packer",
+      "Infrastructure as Code",
+      "Cloud Computing",
+      "Automation"
+    ]
+  },
+  {
+    "title": "PENETRATION TESTER",
+    "skills": [
+      "Penetration Testing",
+      "Security Audits",
+      "Ethical Hacking",
+      "Vulnerability Assessment"
+    ]
+  },
+  {
+    "title": "PHP DEVELOPER",
+    "skills": [
+      "PHP",
+      "MySQL",
+      "Web Development",
+      "Frameworks (Laravel",
+      "Symfony)"
+    ]
+  },
+  {
+    "title": "PLATFORM ENGINEER",
+    "skills": [
+      "Platform Engineering",
+      "Cloud Computing",
+      "Automation",
+      "DevOps Practices"
+    ]
+  },
+  {
+    "title": "PORTFOLIO MANAGER",
+    "skills": [
+      "Portfolio Management",
+      "Investment Management",
+      "Risk Management",
+      "Financial Analysis"
+    ]
+  },
+  {
+    "title": "POWER BI ANALYST",
+    "skills": [
+      "Power BI",
+      "Data Analysis",
+      "SQL",
+      "Business Intelligence"
+    ]
+  },
+  {
+    "title": "POWER BI DEVELOPER",
+    "skills": [
+      "Power BI",
+      "Data Modeling",
+      "DAX",
+      "Data Visualization"
+    ]
+  },
+  {
+    "title": "POWERSHELL ENGINEER",
+    "skills": [
+      "PowerShell",
+      "Automation",
+      "Windows Server Administration",
+      "Scripting"
+    ]
+  },
+  {
+    "title": "PRINCIPLE ENGINEER IN ARTIFICIAL INTELLIGENCE",
+    "skills": [
+      "AI/ML Architecture",
+      "Leadership",
+      "Strategic Planning",
+      "Deep Learning"
+    ]
+  },
+  {
+    "title": "PRINCIPLE ENGINEER IN BIG DATA",
+    "skills": [
+      "Big Data Architecture",
+      "Hadoop",
+      "Spark",
+      "Data Warehousing"
+    ]
+  },
+  {
+    "title": "PRINCIPLE ENGINEER IN DATA ANALYSIS",
+    "skills": [
+      "Data Analysis",
+      "Statistical Modeling",
+      "Data Visualization",
+      "Leadership"
+    ]
+  },
+  {
+    "title": "PRINCIPLE ENGINEER IN MACHINE LEARNING",
+    "skills": [
+      "Machine Learning Algorithms",
+      "Model Development",
+      "Deployment",
+      "Leadership"
+    ]
+  },
+  {
+    "title": "PRODUCT MANAGER",
+    "skills": [
+      "Product Strategy",
+      "Market Analysis",
+      "Requirements Gathering",
+      "Product Roadmap"
+    ]
+  },
+  {
+    "title": "PRODUCTION SUPPORT ENGINEER",
+    "skills": [
+      "Troubleshooting",
+      "Incident Management",
+      "System Monitoring",
+      "Technical Support"
+    ]
+  },
+  {
+    "title": "PROGRAM MANAGER",
+    "skills": [
+      "Program Management",
+      "Planning",
+      "Execution",
+      "Communication"
+    ]
+  },
+  {
+    "title": "PROJECT MANAGER",
+    "skills": [
+      "Project Management",
+      "Planning",
+      "Execution",
+      "Communication"
+    ]
+  },
+  {
+    "title": "PUPPET OPERATIONS ENGINEER",
+    "skills": [
+      "Puppet",
+      "Configuration Management",
+      "Automation",
+      "Infrastructure as Code"
+    ]
+  },
+  {
+    "title": "PYTHON ARCHITECT",
+    "skills": [
+      "Python",
+      "System Architecture",
+      "Design Patterns",
+      "Cloud Computing"
+    ]
+  },
+  {
+    "title": "PYTHON DEVELOPER",
+    "skills": [
+      "Python",
+      "Web Frameworks (Django",
+      "Flask)",
+      "Data Analysis",
+      "Scripting"
+    ]
+  },
+  {
+    "title": "QUALITY ASSURANCE MANAGER",
+    "skills": [
+      "QA Processes",
+      "Test Automation",
+      "Test Planning",
+      "Team Leadership"
+    ]
+  },
+  {
+    "title": "RELEASE MANAGER",
+    "skills": [
+      "Release Management",
+      "CI/CD Pipelines",
+      "Coordination",
+      "Communication"
+    ]
+  },
+  {
+    "title": "REQUIREMENTS MANAGER",
+    "skills": [
+      "Requirements Gathering",
+      "Analysis",
+      "Documentation",
+      "Communication"
+    ]
+  },
+  {
+    "title": "RIGGING ARTIST",
+    "skills": [
+      "Rigging",
+      "Animation",
+      "3D Modeling",
+      "Character Setup"
+    ]
+  },
+  {
+    "title": "SAP CONSULTANT",
+    "skills": [
+      "SAP Modules",
+      "Business Process Analysis",
+      "Implementation",
+      "Customization"
+    ]
+  },
+  {
+    "title": "SECURITY ADMINISTRATOR",
+    "skills": [
+      "Security Tools",
+      "System Administration",
+      "User Management",
+      "Security Policies"
+    ]
+  },
+  {
+    "title": "SECURITY CONSULTANT",
+    "skills": [
+      "Security Consulting",
+      "Risk Assessment",
+      "Compliance",
+      "Security Solutions"
+    ]
+  },
+  {
+    "title": "SECURITY ENGINEER",
+    "skills": [
+      "Security Protocols",
+      "Threat Analysis",
+      "Risk Management",
+      "Incident Response"
+    ]
+  },
+  {
+    "title": "SECURITY MANAGER",
+    "skills": [
+      "Security Management",
+      "Risk Assessment",
+      "Compliance",
+      "Team Leadership"
+    ]
+  },
+  {
+    "title": "SECURITY SPECIALIST",
+    "skills": [
+      "Security Protocols",
+      "Threat Analysis",
+      "Compliance",
+      "Risk Management"
+    ]
+  },
+  {
+    "title": "SENIOR BUILD AND RELEASE ENGINEER",
+    "skills": [
+      "CI/CD Pipelines",
+      "Build Systems",
+      "Automation",
+      "Configuration Management"
+    ]
+  },
+  {
+    "title": "SENIOR BUILD ENGINEER",
+    "skills": [
+      "Build Systems",
+      "Scripting",
+      "Automation",
+      "Software Configuration Management"
+    ]
+  },
+  {
+    "title": "SENIOR DEVOPS ENGINEER",
+    "skills": [
+      "DevOps Practices",
+      "Cloud Computing",
+      "Automation",
+      "System Architecture"
+    ]
+  },
+  {
+    "title": "SENIOR IT CONSULTANT",
+    "skills": [
+      "IT Consulting",
+      "Project Management",
+      "Technical Expertise",
+      "Client Management"
+    ]
+  },
+  {
+    "title": "SEO CONSULTANT",
+    "skills": [
+      "Search Engine Optimization",
+      "Keyword Research",
+      "Content Optimization",
+      "Link Building"
+    ]
+  },
+  {
+    "title": "SEO MANAGER",
+    "skills": [
+      "SEO Strategy",
+      "Team Leadership",
+      "Performance Monitoring",
+      "Reporting"
+    ]
+  },
+  {
+    "title": "SHAREPOINT MANAGER",
+    "skills": [
+      "SharePoint",
+      "Team Leadership",
+      "Project Management",
+      "Collaboration"
+    ]
+  },
+  {
+    "title": "SITE RELIABILITY ENGINEER (KUBERNETES \u00c2\u20ac\u00ef\u00bf\u00bd DOCKER)",
+    "skills": [
+      "Kubernetes",
+      "Docker",
+      "System Reliability",
+      "Automation",
+      "Monitoring"
+    ]
+  },
+  {
+    "title": "SOFTWARE ARCHITECT",
+    "skills": [
+      "System Architecture",
+      "Design Patterns",
+      "Programming Languages",
+      "Cloud Computing"
+    ]
+  },
+  {
+    "title": "SOFTWARE DEVELOPMENT ENGINEER",
+    "skills": [
+      "Software Development",
+      "Programming Languages",
+      "Algorithm Design",
+      "Problem Solving"
+    ]
+  },
+  {
+    "title": "SOFTWARE DEVELOPMENT MANAGER",
+    "skills": [
+      "Software Development",
+      "Team Leadership",
+      "Project Management",
+      "Software Architecture"
+    ]
+  },
+  {
+    "title": "SOFTWARE QUALITY ASSURANCE ANALYST",
+    "skills": [
+      "QA Processes",
+      "Test Planning",
+      "Test Execution",
+      "Reporting"
+    ]
+  },
+  {
+    "title": "SPLUNK ENGINEER",
+    "skills": [
+      "Splunk",
+      "Log Management",
+      "Data Analysis",
+      "System Monitoring"
+    ]
+  },
+  {
+    "title": "STORYBOARD ARTIST",
+    "skills": [
+      "Storyboarding",
+      "Drawing",
+      "Visual Communication",
+      "Film/Animation"
+    ]
+  },
+  {
+    "title": "SYSTEMS INTEGRATION MANAGER",
+    "skills": [
+      "Systems Integration",
+      "Project Management",
+      "Team Leadership",
+      "Communication"
+    ]
+  },
+  {
+    "title": "TECHNICAL ACCOUNT MANAGER",
+    "skills": [
+      "Customer Relationship Management",
+      "Technical Support",
+      "Account Management",
+      "Sales"
+    ]
+  },
+  {
+    "title": "TECHNICAL ANIMATOR",
+    "skills": [
+      "Technical Animation",
+      "Scripting",
+      "Programming",
+      "Animation Software"
+    ]
+  },
+  {
+    "title": "TECHNICAL LEAD",
+    "skills": [
+      "Technical Leadership",
+      "Software Development",
+      "Team Leadership",
+      "Mentoring"
+    ]
+  },
+  {
+    "title": "TECHNICAL OPERATIONS OFFICER",
+    "skills": [
+      "Technical Operations",
+      "Infrastructure Management",
+      "System Administration",
+      "Incident Response"
+    ]
+  },
+  {
+    "title": "TECHNICAL PRODUCT MANAGER",
+    "skills": [
+      "Product Management",
+      "Technical Expertise",
+      "Market Analysis",
+      "Requirements Gathering"
+    ]
+  },
+  {
+    "title": "TECHNOLOGY ADOPTION MANAGER",
+    "skills": [
+      "Technology Adoption",
+      "Training",
+      "Communication",
+      "Change Management"
+    ]
+  },
+  {
+    "title": "TECHNOLOGY ASSISTANT",
+    "skills": [
+      "Technical Support",
+      "Administrative Support",
+      "Hardware/Software",
+      "Troubleshooting"
+    ]
+  },
+  {
+    "title": "TECHNOLOGY MANAGER",
+    "skills": [
+      "IT Management",
+      "Team Leadership",
+      "Project Management",
+      "Budgeting"
+    ]
+  },
+  {
+    "title": "TECHNOLOGY OFFICER",
+    "skills": [
+      "IT Strategy",
+      "Leadership",
+      "Innovation",
+      "Project Management"
+    ]
+  },
+  {
+    "title": "TECHNOLOGY SALES CONSULTANT",
+    "skills": [
+      "Sales",
+      "Technology Solutions",
+      "Customer Relationship Management",
+      "Technical Expertise"
+    ]
+  },
+  {
+    "title": "TECHNOLOGY SPECIALIST",
+    "skills": [
+      "Technical Expertise",
+      "Problem Solving",
+      "Troubleshooting",
+      "IT Support"
+    ]
+  },
+  {
+    "title": "UI (USER INTERFACE) DESIGNER",
+    "skills": [
+      "UI Design",
+      "User Research",
+      "Prototyping",
+      "Usability Testing"
+    ]
+  },
+  {
+    "title": "UX/UI DESIGNER",
+    "skills": [
+      "UX/UI Design",
+      "User Research",
+      "Prototyping",
+      "Usability Testing"
+    ]
+  },
+  {
+    "title": "UX/UI RESEARCHER",
+    "skills": [
+      "User Research",
+      "Usability Testing",
+      "Data Analysis",
+      "Reporting"
+    ]
+  },
+  {
+    "title": "UX/UI SPECIALIST",
+    "skills": [
+      "UX/UI Design",
+      "User Research",
+      "Prototyping",
+      "Usability Testing"
+    ]
+  },
+  {
+    "title": "VFX ARTIST",
+    "skills": [
+      "Visual Effects",
+      "Compositing",
+      "3D Modeling",
+      "Simulation"
+    ]
+  },
+  {
+    "title": "VISUAL EFFECTS ANIMATOR",
+    "skills": [
+      "Visual Effects",
+      "Animation",
+      "Compositing",
+      "3D Modeling"
+    ]
+  },
+  {
+    "title": "WEB ANALYTICS DEVELOPER",
+    "skills": [
+      "Web Analytics Tools",
+      "Data Analysis",
+      "Reporting",
+      "A/B Testing"
+    ]
+  },
+  {
+    "title": "WEB CONTENT MANAGER",
+    "skills": [
+      "Content Creation",
+      "Content Strategy",
+      "CMS",
+      "SEO"
+    ]
+  },
+  {
+    "title": "WEB DESIGNER",
+    "skills": [
+      "Web Design",
+      "Graphic Design",
+      "UI/UX Principles",
+      "Wireframing"
+    ]
+  },
+  {
+    "title": "WEB DEVELOPER",
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Web Development",
+      "Frameworks"
+    ]
+  },
+  {
+    "title": "WEB ENGINEER",
+    "skills": [
+      "Web Technologies",
+      "System Architecture",
+      "Performance Optimization",
+      "Security"
+    ]
+  },
+  {
+    "title": "WEB PRODUCER",
+    "skills": [
+      "Web Content Management",
+      "Project Management",
+      "Content Strategy",
+      "Collaboration"
+    ]
+  },
+  {
+    "title": "WEB PROJECT MANAGER",
+    "skills": [
+      "Project Management",
+      "Web Development",
+      "Communication",
+      "Budgeting"
+    ]
+  },
+  {
+    "title": "WEBMASTER",
+    "skills": [
+      "Web Development",
+      "Web Design",
+      "System Administration",
+      "Content Management"
+    ]
+  },
+  {
+    "title": "XL DEPLOY ENGINEER",
+    "skills": [
+      "XL Deploy",
+      "Deployment Automation",
+      "DevOps Practices",
+      "Configuration Management"
+    ]
+  },
+  {
+    "title": "ZABBIX ENGINEER",
+    "skills": [
+      "Zabbix",
+      "System Monitoring",
+      "Network Monitoring",
+      "Alerting"
+    ]
+  }
+]

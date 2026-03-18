@@ -7,17 +7,18 @@ import UploadPage from "./pages/UploadPage";
 import Results from "./components/Results";
 import ComingSoon from "./pages/ComingSoon";
 import type { JobSuggestion } from "./types/jobSuggestion";
-import { analyzeResume } from "./api/api";
+import { analyzeResume, analyzeManualProfile } from "./api/api"; 
+import type { ManualProfilePayload } from "./types/manualProfilePayload";
 import Purpose from "./pages/Purpose";
-import Features from "./pages/Features";
 import { supabase } from "./utils/supabase";
+import Features from "./pages/Features";
 
 function AppContent() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const [file, setFile] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [analyzedCount, setAnalyzedCount] = useState<number>(0);
+  const [analyzedCount, setAnalyzedCount] = useState<number>(30);
   const [suggestions, setSuggestions] = useState<JobSuggestion[]>(() => {
     const saved = localStorage.getItem("techfit_results");
     return saved ? JSON.parse(saved) : [];
@@ -48,6 +49,8 @@ function AppContent() {
 
   const handleReset = () => {
     localStorage.removeItem("techfit_results");
+    localStorage.removeItem("techfit_manual_skills");
+    localStorage.removeItem("techfit_manual_interests");
     setSuggestions([]);
     setFile(null);
   };
@@ -62,7 +65,27 @@ function AppContent() {
       if (res.new_count) setAnalyzedCount(res.new_count);
       navigate("/results");
     } catch (err: any) {
-      setError(err.message || "Failed to analyze resume. Make sure the backend is running!");
+      setError(
+        err.message || "Failed to analyze resume. Make sure the backend is running!",
+      );
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleManualAnalyze = async (payload: ManualProfilePayload) => {
+    setLoading(true);
+    setError(null);
+    try {
+      const res = await analyzeManualProfile(payload);
+      
+      setSuggestions(res.suggestions);
+      if (res.new_count) setAnalyzedCount(res.new_count);
+      navigate("/results");
+    } catch (err: any) {
+      setError(
+        err.message || "Failed to match profile. Make sure the backend is running!",
+      );
     } finally {
       setLoading(false);
     }
@@ -73,10 +96,7 @@ function AppContent() {
       <Navbar theme={theme} setTheme={setTheme} />
       <main>
         <Routes>
-          <Route
-            path="/"
-            element={<Home analyzedCount={analyzedCount} />}
-          />
+          <Route path="/" element={<Home analyzedCount={analyzedCount} />} />
           <Route
             path="/upload"
             element={
@@ -85,6 +105,7 @@ function AppContent() {
                 onFileSelect={setFile}
                 onClearFile={() => setFile(null)}
                 onAnalyze={handleAnalyze}
+                onManualAnalyze={handleManualAnalyze}
                 loading={loading}
                 error={error}
               />
@@ -95,13 +116,16 @@ function AppContent() {
             element={
               <Results
                 suggestions={suggestions}
-                onReset={() => { handleReset(); navigate("/upload"); }}
+                onReset={() => {
+                  handleReset();
+                  navigate("/upload");
+                }}
               />
             }
           />
           <Route path="/coming-soon" element={<ComingSoon />} />
-          <Route path="/purpose" element={<Purpose/>} />
-          <Route path="/features" element={<Features/>} />
+          <Route path="/purpose" element={<Purpose />} />
+          <Route path="/features" element={<Features />} />
         </Routes>
       </main>
       <Footer />

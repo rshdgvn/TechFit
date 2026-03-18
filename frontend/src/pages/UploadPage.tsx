@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSearchParams, useNavigate } from "react-router-dom";
 import UploadCard from "../components/UploadCard";
+import ManualEntryCard from "../components/ManualEntryCard";
 import "../css/UploadPage.css";
 
 const IcoUpload = () => (
@@ -40,12 +41,13 @@ interface UploadPageProps {
   onFileSelect: (file: File) => void;
   onClearFile: () => void;
   onAnalyze: () => void;
+  onManualAnalyze: (payload: { mode: "manual"; skills: string[]; custom_skills: string[]; interests: string }) => void;
   loading: boolean;
   error: string | null;
 }
 
 export default function UploadPage({
-  file, onFileSelect, onClearFile, onAnalyze, loading, error,
+  file, onFileSelect, onClearFile, onAnalyze, onManualAnalyze, loading, error,
 }: UploadPageProps) {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
@@ -61,12 +63,14 @@ export default function UploadPage({
     <div className="upload-page">
       <div className="upload-page-inner" style={{ animation: "fadeUp 0.4s both" }}>
 
+        {/* Back */}
         <button className="upload-back-btn" onClick={() => navigate("/")}>
           <IcoBack /> Back
         </button>
 
+        {/* Heading */}
         <p className="upload-eyebrow">
-          {mode === "upload" ? "Techfit Analysis" : "Manual Entry"}
+          {mode === "upload" ? "Resume Analysis" : "Manual Entry"}
         </p>
         <h1 className="upload-title">
           {mode === "upload"
@@ -79,6 +83,7 @@ export default function UploadPage({
             : "No resume? Tell us about your skills and we'll find your best fit."}
         </p>
 
+        {/* Tabs */}
         <div className="upload-mode-tabs">
           <button
             className={`upload-tab${mode === "upload" ? " active" : ""}`}
@@ -94,6 +99,7 @@ export default function UploadPage({
           </button>
         </div>
 
+        {/* Upload card / manual */}
         <div className="upload-content">
           {mode === "upload" ? (
             <UploadCard
@@ -105,17 +111,11 @@ export default function UploadPage({
               error={error}
             />
           ) : (
-            <div className="manual-coming-soon">
-              <span className="manual-soon-badge">Coming Soon</span>
-              <p className="manual-soon-title">Profile wizard in progress</p>
-              <p className="manual-soon-sub">
-                We're building a step-by-step wizard to match you without a resume.
-                Try uploading in the meantime.
-              </p>
-              <button className="manual-soon-btn" onClick={() => setMode("upload")}>
-                <IcoUpload /> Upload Resume Instead
-              </button>
-            </div>
+            <ManualEntryCard
+              onAnalyze={onManualAnalyze}
+              loading={loading}
+              error={error}
+            />
           )}
         </div>
 

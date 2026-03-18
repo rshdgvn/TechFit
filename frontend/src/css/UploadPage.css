@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 60px 24px 80px;
+  padding: 30px 24px 80px;
 }
 
 .upload-page-inner {
@@ -203,7 +203,7 @@
 }
 
 @media (max-width: 600px) {
-  .upload-page { padding: 40px 20px 56px; align-items: flex-start; }
+  .upload-page { padding: 30px 20px 56px; align-items: flex-start; }
   .upload-title { font-size: 1.9rem; }
   .upload-sub { font-size: 0.9rem; margin-bottom: 24px; }
   .upload-tab { font-size: 0.78rem; padding: 8px 10px; }

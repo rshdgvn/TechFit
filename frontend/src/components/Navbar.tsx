@@ -24,7 +24,7 @@ export default function Navbar({ theme, setTheme }: NavbarProps) {
   }, []);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 8);
+    const handleScroll = () => setScrolled(window.scrollY > 12);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -38,66 +38,61 @@ export default function Navbar({ theme, setTheme }: NavbarProps) {
   ];
 
   return (
-    <nav className={`navbar${scrolled ? " scrolled" : ""}`}>
-      <div className="navbar-inner">
+    <div className={`navbar-wrap${scrolled ? " scrolled" : ""}`}>
+      <nav className="navbar">
+        <div className="navbar-inner">
 
-        {/* ── Left: Logo + links ── */}
-        <div className="navbar-left">
-          <Link to="/" className="logo-link" onClick={closeMenu}>
-            <img src="/icon.svg" alt="Techfit" className="logo-img" />
-            <span className="logo-text">Techfit</span>
-          </Link>
+          {/* ── Left: Logo + links ── */}
+          <div className="navbar-left">
+            <Link to="/" className="logo-link" onClick={closeMenu}>
+              <img src="/icon.svg" alt="Techfit" className="logo-img" />
+              <span className="logo-text">Techfit</span>
+            </Link>
 
-          <div className="nav-links">
-            {navLinks.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className={`nav-item${location.pathname === link.to ? " active" : ""}`}
-              >
-                {link.label}
-              </Link>
-            ))}
+            <div className="nav-links">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className={`nav-item${location.pathname === link.to ? " active" : ""}`}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* ── Right: CTAs + theme ── */}
+          <div className="navbar-right">
+            <button className="theme-btn desktop-theme-btn" onClick={toggleTheme} aria-label="Toggle theme">
+              <span className="btn-icon-wrap">
+                {theme === "light" ? <IcoMoon /> : <IcoSun />}
+              </span>
+            </button>
+
+            <button className="nav-btn-ghost" onClick={() => navigate("/upload?mode=manual")}>
+              No resume?
+            </button>
+
+            <button className="nav-btn-primary" onClick={() => navigate("/upload")}>
+              Get Matched
+            </button>
+
+            <button
+              className="theme-btn mobile-menu-btn"
+              onClick={() => setIsMenuOpen((o) => !o)}
+              aria-label="Toggle menu"
+              aria-expanded={isMenuOpen}
+            >
+              <span className="btn-icon-wrap">
+                {isMenuOpen ? <IcoClose /> : <IcoMenu />}
+              </span>
+            </button>
           </div>
         </div>
+      </nav>
 
-        {/* ── Right: CTAs + theme ── */}
-        <div className="navbar-right">
-          <button className="theme-btn desktop-theme-btn" onClick={toggleTheme} aria-label="Toggle theme">
-            <span className="btn-icon-wrap">
-              {theme === "light" ? <IcoMoon /> : <IcoSun />}
-            </span>
-          </button>
-
-          <button
-            className="nav-btn-ghost"
-            onClick={() => navigate("/upload?mode=manual")}
-          >
-            No resume?
-          </button>
-
-          <button
-            className="nav-btn-primary"
-            onClick={() => navigate("/upload")}
-          >
-            Get Matched
-          </button>
-
-          <button
-            className="theme-btn mobile-menu-btn"
-            onClick={() => setIsMenuOpen((o) => !o)}
-            aria-label="Toggle menu"
-            aria-expanded={isMenuOpen}
-          >
-            <span className="btn-icon-wrap">
-              {isMenuOpen ? <IcoClose /> : <IcoMenu />}
-            </span>
-          </button>
-        </div>
-
-      </div>
-
-      {/* ── Mobile dropdown ── */}
+      {/* ── Mobile dropdown — outside pill, below it ── */}
       <div className={`mobile-dropdown${isMenuOpen ? " open" : ""}`}>
         {navLinks.map((link) => (
           <Link
@@ -109,19 +104,24 @@ export default function Navbar({ theme, setTheme }: NavbarProps) {
             {link.label}
           </Link>
         ))}
+
+        {/* CTAs visible in mobile */}
         <div className="mobile-nav-ctas">
-          <button className="nav-btn-ghost w-full" onClick={() => { navigate("/upload?mode=manual"); closeMenu(); }}>
+          <button className="nav-btn-ghost mobile-w-full"
+            onClick={() => { navigate("/upload?mode=manual"); closeMenu(); }}>
             No resume?
           </button>
-          <button className="nav-btn-primary w-full" onClick={() => { navigate("/upload"); closeMenu(); }}>
+          <button className="nav-btn-primary mobile-w-full"
+            onClick={() => { navigate("/upload"); closeMenu(); }}>
             Get Matched
           </button>
         </div>
+
         <button className="mobile-nav-item mobile-theme-toggle" onClick={toggleTheme}>
           <span>Switch to {theme === "light" ? "dark" : "light"} mode</span>
           {theme === "light" ? <IcoMoon /> : <IcoSun />}
         </button>
       </div>
-    </nav>
+    </div>
   );
 }

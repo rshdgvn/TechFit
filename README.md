@@ -10,7 +10,7 @@
 
 I built this app because I kept asking myself a simple question:
 "Where do my skills actually fit in tech?"
-Am I leaning more toward Cybersecurity? Software Engineering? Or AI\ML?
+Am I leaning more toward Cybersecurity? Software Engineering? Or AI/ML?
 My skills were spread across multiple areas and it wasn't obvious which direction they pointed to. Instead of guessing, I decided to build a tool that could analyze it.
 Techfit is a full-stack application built with a React + TypeScript frontend and a FastAPI backend. It uses semantic similarity matching powered by Sentence Transformers to find the tech roles that most closely align with your skills and experience — not just keyword matching, but actual contextual understanding of what you know and what you've done.
 The goal is simple:

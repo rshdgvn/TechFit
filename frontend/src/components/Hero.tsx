@@ -7,6 +7,10 @@ export default function Hero({ analyzedCount }: { analyzedCount: number }) {
 
   return (
     <div className="hero-wrapper" style={{ animation: "fadeUp 0.55s both" }}>
+      
+      {/* ── NEW: The clean moving grid background ── */}
+      <div className="hero-bg-matrix"></div>
+      
       <div className="hero-glow-blob" />
       <div className="hero-glow-blob hero-glow-blob--secondary" />
 
@@ -33,6 +37,21 @@ export default function Hero({ analyzedCount }: { analyzedCount: number }) {
         experience — then matches you to the exact roles where you'll thrive
         most.
       </p>
+
+      <div
+        className="hero-cta-pair"
+        style={{ animation: "fadeUp 0.5s 0.3s both" }}
+      >
+        <button className="btn-cta-primary" onClick={() => navigate("/upload")}>
+          Analyze my resume
+        </button>
+        <button
+          className="btn-cta-ghost"
+          onClick={() => navigate("/upload?mode=manual")}
+        >
+          Don't have resume?
+        </button>
+      </div>
 
       <div
         className="hero-stats-flat"
@@ -64,21 +83,6 @@ export default function Hero({ analyzedCount }: { analyzedCount: number }) {
             <strong>1k+</strong> Skills Mapped
           </span>
         </div>
-      </div>
-
-      <div
-        className="hero-cta-pair"
-        style={{ animation: "fadeUp 0.5s 0.3s both" }}
-      >
-        <button className="btn-cta-primary" onClick={() => navigate("/upload")}>
-          Analyze my resume
-        </button>
-        <button
-          className="btn-cta-ghost"
-          onClick={() => navigate("/upload?mode=manual")}
-        >
-          Don't have resume?
-        </button>
       </div>
     </div>
   );
